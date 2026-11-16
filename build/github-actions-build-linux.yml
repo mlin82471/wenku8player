@@ -3,8 +3,13 @@ name: Build Linux Packages (Tauri v2)
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
     tags:
       - 'v*'
+
+permissions:
+  contents: write
 
 jobs:
   build-linux:
@@ -49,3 +54,14 @@ jobs:
           path: |
             src-tauri/target/release/bundle/deb/*.deb
             src-tauri/target/release/bundle/appimage/*.AppImage
+
+      - name: Attach Linux assets to GitHub Release
+        uses: softprops/action-gh-release@v2
+        if: always()
+        with:
+          tag_name: v1.0.0
+          files: |
+            src-tauri/target/release/bundle/deb/*.deb
+            src-tauri/target/release/bundle/appimage/*.AppImage
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
