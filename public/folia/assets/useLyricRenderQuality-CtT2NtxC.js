@@ -1,0 +1,1 @@
+import{d as e}from"./preload-helper-DSh1qyfD.js";import{Sc as t}from"./lucide-icons-Cn2-pGp9.js";import{Si as n}from"./temperaPalette-B65DngfP.js";import{i as r,r as i}from"./lyricRenderQualityPin-BjtS97qA.js";var a=e(t(),1),o=e=>{let t=r(),o=i(),s=t?void 0:e?.scale,c=t?void 0:e?.antialias;return(0,a.useMemo)(()=>n(o,s&&c?{scale:s,antialias:c}:null),[o,s,c])};export{o as t};

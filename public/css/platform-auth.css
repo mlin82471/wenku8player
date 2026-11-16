@@ -1,0 +1,507 @@
+/* ==========================================================================
+   多平台账号通行证与凭据管理弹窗样式 (PlatformLoginModal)
+   Apple 暗色液态毛玻璃 + 多平台色调动态过渡 + 扫码/Cookie 双模
+   ========================================================================== */
+
+.platform-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.32s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.platform-modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.platform-modal-window {
+  position: relative;
+  width: 100%;
+  max-width: 660px;
+  border-radius: 28px;
+  overflow: hidden;
+  color: #ffffff;
+  background: rgba(18, 18, 24, 0.88);
+  backdrop-filter: blur(36px) saturate(190%);
+  -webkit-backdrop-filter: blur(36px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 32px 72px -16px rgba(0, 0, 0, 0.9),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: scale(0.94) translateY(12px);
+  transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1), box-shadow 0.35s ease;
+}
+
+.platform-modal-backdrop.open .platform-modal-window {
+  transform: scale(1) translateY(0);
+}
+
+/* 顶部栏 */
+.platform-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.platform-modal-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.platform-indicator-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.platform-modal-title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.platform-close-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.platform-close-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* 主体分栏 */
+.platform-modal-body {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 380px;
+}
+
+/* 左侧平台切换列表 */
+.platform-sidebar {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.platform-select-item {
+  width: 100%;
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+  color: #ffffff;
+}
+
+.platform-select-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.platform-select-item.active {
+  background: rgba(255, 255, 255, 0.11);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.platform-tag-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.platform-en-tag {
+  font-size: 9.5px;
+  font-family: "Courier New", monospace;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.platform-status-badge {
+  font-size: 10px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.platform-status-badge.connected {
+  background: rgba(16, 185, 129, 0.18);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.platform-status-badge.disconnected {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.platform-name-label {
+  font-size: 13.5px;
+  font-weight: 700;
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.platform-desc-label {
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 3px;
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 右侧内容操作区 */
+.platform-content-panel {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 顶部模式切换 Tab */
+.platform-mode-switch-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.platform-login-label {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+}
+
+.platform-mode-pills {
+  display: flex;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 3px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.platform-mode-btn {
+  padding: 4px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.platform-mode-btn.active {
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+/* 扫码区域 */
+.platform-qr-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.platform-qr-box {
+  position: relative;
+  width: 168px;
+  height: 168px;
+  border-radius: 20px;
+  background: #ffffff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.platform-qr-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.platform-qr-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  text-align: center;
+}
+
+.platform-qr-hint {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 14px;
+}
+
+/* Cookie 模式文本框 */
+.platform-cookie-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.platform-cookie-textarea {
+  width: 100%;
+  height: 110px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 12px;
+  font-size: 11.5px;
+  font-family: monospace;
+  outline: none;
+  resize: none;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.platform-cookie-textarea:focus {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.platform-submit-btn {
+  width: 100%;
+  padding: 11px 0;
+  border-radius: 14px;
+  border: none;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.platform-submit-btn:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+.platform-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 已登录名片 */
+.platform-profile-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.platform-profile-avatar-wrap {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  padding: 2.5px;
+  margin-bottom: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.platform-profile-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.platform-profile-avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #1c1c22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.platform-profile-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.platform-profile-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.platform-vip-tag {
+  font-size: 10px;
+  font-family: monospace;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 6px;
+  border: 1px solid;
+}
+
+.platform-profile-desc {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 6px;
+}
+
+.platform-profile-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+  width: 100%;
+}
+
+.platform-sync-large-btn {
+  flex: 1;
+  padding: 11px 0;
+  border-radius: 14px;
+  border: none;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.platform-sync-large-btn:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+.platform-disconnect-btn {
+  padding: 11px 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.platform-disconnect-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.35);
+  color: #ef4444;
+}
+
+.platform-footer-tip {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.35);
+  text-align: center;
+  margin-top: 14px;
+}
+
+/* 热门歌单快速标签 */
+.platform-tag-pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: #d1d5db;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.platform-tag-pill:hover {
+  background: rgba(49, 194, 124, 0.18);
+  border-color: rgba(49, 194, 124, 0.4);
+  color: #31c27c;
+  transform: translateY(-1px);
+}
+
+/* 官方巅峰榜卡片 */
+.platform-toplist-card {
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.platform-toplist-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+.toplist-badge {
+  align-self: flex-start;
+  font-size: 9px;
+  font-weight: 800;
+  color: #fff;
+  padding: 1px 6px;
+  border-radius: 6px;
+  letter-spacing: 0.05em;
+}
+.toplist-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 2px;
+}
+.toplist-sub {
+  font-size: 10.5px;
+  color: #9ca3af;
+}

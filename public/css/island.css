@@ -1,0 +1,477 @@
+/* ==========================================================================
+   Wenku8 Desktop Island (桌面置顶精致悬浮灵动岛)
+   - 初始待机：116x26 极小贴合胶囊，绝不阻挡桌面任何点击
+   - 播放中：180x26 平滑拉长
+   - 悬浮展开：320x80 精致紧凑微卡片，避免臃肿
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body.desktop-island-body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* 舞台容器：100% 贴合窗口 */
+.island-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  pointer-events: auto;
+  cursor: grab;
+}
+
+.island-stage:active {
+  cursor: grabbing;
+}
+
+/* ==========================================================================
+   核心灵动岛胶囊体
+   ========================================================================== */
+.island {
+  position: absolute;
+  left: 50%;
+  top: 2px;
+  transform: translateX(-50%);
+  width: 116px;
+  height: 26px;
+  border-radius: 14px;
+  overflow: hidden;
+
+  /* 高透液态玻璃质感 */
+  background: rgba(16, 18, 24, 0.48);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.25),
+    0 4px 16px rgba(0, 0, 0, 0.28);
+
+  transition: all 0.35s cubic-bezier(0.32, 1.3, 0.5, 1);
+  will-change: width, height, border-radius, box-shadow;
+}
+
+/* 播放态小巧拉伸 */
+.island.is-playing:not(.is-expanded) {
+  width: 180px;
+  height: 26px;
+  border-radius: 14px;
+  background: rgba(14, 16, 22, 0.55);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* 展开态小巧精致卡片 (276x68 精致克制) */
+.island.is-expanded {
+  width: 276px;
+  height: 68px;
+  border-radius: 17px;
+  background: rgba(14, 18, 26, 0.72);
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.65),
+    0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* 动态微光光晕 */
+.island-glow {
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 245, 212, 0.35) 0%, transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.island.is-expanded .island-glow {
+  opacity: 1;
+}
+
+/* 文字与图标通用清晰阴影 */
+.compact-title,
+.full-title,
+.full-artist,
+.time-label,
+.vds-btn {
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* ==========================================================================
+   1. 紧凑胶囊层 (Compact)
+   ========================================================================== */
+.island-compact {
+  width: 100%;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  transition: opacity 0.15s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.island.is-expanded .island-compact {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 左侧呼吸点与旋转封面 */
+.compact-left {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.compact-idle-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+  animation: idleDotBreathe 2.4s ease-in-out infinite;
+}
+
+.island.is-playing .compact-idle-dot {
+  display: none;
+}
+
+@keyframes idleDotBreathe {
+  0%, 100% { transform: scale(0.85); opacity: 0.6; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+.compact-cover-wrap {
+  display: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  animation: spinCover 12s linear infinite;
+}
+
+.island.is-playing .compact-cover-wrap {
+  display: block;
+}
+
+.compact-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes spinCover {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* 中间歌名 */
+.compact-center {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0 6px;
+  text-align: left;
+}
+
+.compact-title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* 右侧跳动音浪 */
+.compact-right {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.compact-waves {
+  display: none;
+  align-items: center;
+  gap: 1.8px;
+  height: 10px;
+}
+
+.island.is-playing .compact-waves {
+  display: flex;
+}
+
+.w-bar {
+  width: 1.8px;
+  height: 3px;
+  border-radius: 1.5px;
+  background: #00f5d4;
+  box-shadow: 0 0 4px rgba(0, 245, 212, 0.6);
+  transform-origin: bottom center;
+}
+
+.island.is-playing .w-bar:nth-child(1) { animation: wavePlay 0.9s ease-in-out infinite alternate; }
+.island.is-playing .w-bar:nth-child(2) { animation: wavePlay 1.2s ease-in-out 0.2s infinite alternate; }
+.island.is-playing .w-bar:nth-child(3) { animation: wavePlay 0.8s ease-in-out 0.4s infinite alternate; }
+.island.is-playing .w-bar:nth-child(4) { animation: wavePlay 1.0s ease-in-out 0.1s infinite alternate; }
+
+@keyframes wavePlay {
+  0% { height: 2px; }
+  100% { height: 10px; }
+}
+
+/* ==========================================================================
+   2. 悬停展开微卡片层 (Full Card - 紧凑精致 276x68)
+   ========================================================================== */
+.island-full {
+  width: 100%;
+  height: 100%;
+  padding: 6px 10px 5px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease 0.08s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.island.is-expanded .island-full {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 顶部信息行：36px 封面 + 标题歌手 + 极简按钮 */
+.full-top-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+/* 36px 精致专辑封面（点击直接进入大播放层） */
+.full-cover-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.18s ease;
+}
+
+.full-cover-wrap:hover {
+  transform: scale(1.08);
+  border-color: #ffffff;
+}
+
+.full-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.full-cover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+
+.full-cover-wrap:hover .full-cover-overlay {
+  opacity: 1;
+}
+
+/* 歌曲信息 */
+.full-info-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.full-title-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.full-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.platform-badge {
+  font-size: 8px;
+  font-weight: 600;
+  padding: 0 3px;
+  border-radius: 9999px;
+  background: rgba(239, 68, 68, 0.25);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  color: #fca5a5;
+  flex-shrink: 0;
+}
+
+.platform-badge.local {
+  background: rgba(59, 130, 246, 0.25);
+  border-color: rgba(59, 130, 246, 0.5);
+  color: #93c5fd;
+}
+
+.full-artist {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 控制按钮紧凑组（融入右侧） */
+.compact-controls-right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.vds-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+.vds-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.45);
+  transform: scale(1.1);
+}
+
+.vds-btn:active {
+  transform: scale(0.92);
+}
+
+.vds-play-btn {
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  color: #0b0f19;
+  border-color: #ffffff;
+}
+
+.vds-play-btn:hover {
+  background: #f4f4f5;
+  color: #000;
+  transform: scale(1.12);
+}
+
+.vds-action-btn {
+  border-radius: 6px;
+  width: 20px;
+  height: 20px;
+}
+
+/* 底部行：细进度条与时间 */
+.full-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.time-label {
+  font-size: 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  min-width: 28px;
+}
+
+.progress-track-wrap {
+  flex: 1;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.progress-track {
+  width: 100%;
+  height: 3px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: visible;
+}
+
+.progress-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0%;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #ec4899, #8b5cf6, #00f5d4);
+  box-shadow: 0 0 6px rgba(0, 245, 212, 0.5);
+  transition: width 0.1s linear;
+}
+
+.progress-thumb {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.9);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.15s ease;
+}
+
+.progress-track-wrap:hover .progress-thumb {
+  transform: translate(-50%, -50%) scale(1);
+}

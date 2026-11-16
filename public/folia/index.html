@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classic Standalone · Folia</title>
+    <style>
+      html,body,#root{background:#0a0a0c;width:100%;height:100%;margin:0;padding:0;overflow:hidden}
+      /* 针对性屏蔽 Folia 内部遗留的设置窗口与对话框，避免影响动效正常渲染 */
+      .st-window, [data-folia-sheet], [data-folia-keyboard-window], [data-ponder] {
+        display: none !important;
+        pointer-events: none !important;
+      }
+    </style>
+    <script>
+      // 彻底拦截右键上下文菜单事件，防止唤出 Folia 内部设置对话框
+      window.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }, true);
+      document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }, true);
+
+      // 清除并注销任何残留的 Service Worker 与离线缓存，杜绝页面被劫持为在线书架
+      try {
+        if (typeof navigator !== 'undefined' && navigator.serviceWorker) {
+          navigator.serviceWorker.getRegistrations().then(function (rs) {
+            rs.forEach(function (r) { r.unregister(); });
+          });
+        }
+        if (typeof window !== 'undefined' && window.caches) {
+          caches.keys().then(function (ks) {
+            ks.forEach(function (k) { caches.delete(k); });
+          });
+        }
+      } catch (_) {}
+    </script>
+    <script type="module" crossorigin src="./assets/classic-DHXuZDRo.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/preload-helper-DSh1qyfD.js">
+    <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-P2Xu9kJm.js">
+    <link rel="modulepreload" crossorigin href="./assets/lucide-icons-Cn2-pGp9.js">
+    <link rel="modulepreload" crossorigin href="./assets/temperaPalette-B65DngfP.js">
+    <link rel="modulepreload" crossorigin href="./assets/proxy-DjSoni6P.js">
+    <link rel="modulepreload" crossorigin href="./assets/use-motion-value-mv0HIlRL.js">
+    <link rel="modulepreload" crossorigin href="./assets/use-transform-DBgt2xE6.js">
+    <link rel="modulepreload" crossorigin href="./assets/AnimatePresence-CP7dL-Fk.js">
+    <link rel="modulepreload" crossorigin href="./assets/ColorField-DcMRJq9c.js">
+    <link rel="modulepreload" crossorigin href="./assets/kit-zrc8dRhR.js">
+    <link rel="modulepreload" crossorigin href="./assets/QuickControlChip-vDsVD-TQ.js">
+    <link rel="modulepreload" crossorigin href="./assets/panelRows-Cvw7y0od.js">
+    <link rel="modulepreload" crossorigin href="./assets/ThemedDialog-nUtjCHHj.js">
+    <link rel="modulepreload" crossorigin href="./assets/registry-rcY1nYJI.js">
+    <link rel="stylesheet" crossorigin href="./assets/temperaPalette-QTgsb78Q.css">
+    <link rel="stylesheet" crossorigin href="./assets/src-B08-u8gA.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

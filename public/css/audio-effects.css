@@ -1,0 +1,363 @@
+/* ==========================================================================
+   audio-effects.css — 苹果风深色高透毛玻璃调音台 + 景深光圈 + 底部波形微动效
+   ========================================================================== */
+
+/* 调音台主弹窗：暗色高透毛玻璃 + 1px 细微半透明高光描边 */
+.audio-effect-popover {
+  position: fixed;
+  top: 68px;
+  right: 28px;
+  width: 390px;
+  z-index: 1000;
+  border-radius: 20px;
+  padding: 18px 20px;
+  background: rgba(18, 18, 22, 0.78);
+  backdrop-filter: blur(32px) saturate(180%);
+  -webkit-backdrop-filter: blur(32px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 28px 56px -12px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  color: #f4f4f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  user-select: none;
+  animation: aepSlideIn 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes aepSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.aep-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.aep-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.aep-indicator-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #f59e0b;
+  box-shadow: 0 0 10px #f59e0b;
+  animation: aepPulse 2s infinite ease-in-out;
+}
+
+@keyframes aepPulse {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.25); }
+}
+
+.aep-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.aep-close-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 11px;
+  padding: 3px 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.aep-close-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* 6 大预设卡片矩阵 */
+.aep-preset-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  margin-bottom: 14px;
+}
+
+.aep-preset-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.035);
+  cursor: pointer;
+  transition: all 0.16s ease;
+  text-align: left;
+}
+
+.aep-preset-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+}
+
+.aep-preset-card.active {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(245, 158, 11, 0.7);
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+.aep-preset-tag {
+  font-family: monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+
+.aep-preset-card.active .aep-preset-tag {
+  color: #fcd34d;
+}
+
+.aep-preset-name {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* 3D 声源雷达卡片 */
+.aep-radar-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 14px;
+}
+
+.aep-radar-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fcd34d;
+}
+
+.aep-radar-sub {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 2px;
+}
+
+.aep-radar-circle {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.aep-radar-head {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.aep-radar-blip {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #f59e0b;
+  box-shadow: 0 0 10px #f59e0b;
+  transition: transform 0.05s linear;
+}
+
+/* 10 段 EQ 推子区域 */
+.aep-eq-section {
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 12px 14px 10px;
+}
+
+.aep-eq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  font-family: monospace;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 8px;
+}
+
+.aep-reset-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  font-size: 10px;
+  transition: color 0.15s ease;
+}
+
+.aep-reset-btn:hover {
+  color: #fff;
+}
+
+.aep-eq-sliders-row {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 5px;
+  height: 110px;
+  align-items: flex-end;
+  padding-top: 4px;
+}
+
+.aep-slider-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.aep-val-label {
+  font-family: monospace;
+  font-size: 8px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.aep-track-wrap {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3px 0;
+}
+
+.aep-fill-bar {
+  width: 3.5px;
+  border-radius: 2px;
+  background: linear-gradient(to top, rgba(245, 158, 11, 0.5), #fcd34d);
+  position: absolute;
+  bottom: 0;
+  pointer-events: none;
+  transition: height 0.08s ease;
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.35);
+}
+
+.aep-vertical-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: ns-resize;
+  margin: 0;
+}
+
+.aep-freq-label {
+  font-family: monospace;
+  font-size: 8px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* ==========================================================================
+   Apple 风格毛玻璃圆形按钮 (Glassmorphic Icon Button)
+   ========================================================================== */
+.icon-circle-btn {
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), inset 0 1px 1px rgba(255, 255, 255, 0.9) !important;
+  transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.18s ease, background 0.18s ease !important;
+}
+
+.icon-circle-btn:hover {
+  transform: translateY(-2px) scale(1.06) !important;
+  background: #ffffff !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12), 0 0 12px rgba(139, 92, 246, 0.22), inset 0 1px 1px #fff !important;
+}
+
+.icon-circle-btn:active {
+  transform: scale(0.95) !important;
+}
+
+/* ==========================================================================
+   底部 Dock 正在播放波形跳动微动效 (Waveform Equalizer Animation)
+   ========================================================================== */
+.bottom-playing-bars {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2.5px;
+  height: 12px;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+.bottom-playing-bar {
+  width: 2.5px;
+  height: 100%;
+  background: var(--album-accent, #ef4444);
+  border-radius: 1px;
+  animation: playBarJump 1.1s ease-in-out infinite alternate;
+}
+
+.bottom-playing-bar:nth-child(2) {
+  animation-delay: 0.22s;
+  animation-duration: 0.85s;
+}
+
+.bottom-playing-bar:nth-child(3) {
+  animation-delay: 0.44s;
+  animation-duration: 1.25s;
+}
+
+.bottom-playing-bars.paused .bottom-playing-bar {
+  animation-play-state: paused !important;
+  height: 3px !important;
+}
+
+@keyframes playBarJump {
+  0% { height: 20%; }
+  50% { height: 95%; }
+  100% { height: 40%; }
+}
+
+/* ==========================================================================
+   底部极细流光进度条 (Slim Dock Beam Progress)
+   ========================================================================== */
+.shelf-footer-bar {
+  position: relative;
+}
+
+.shelf-dock-progress-beam {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #ef4444, #8b5cf6, #3b82f6);
+  border-radius: 999px;
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.6);
+  transition: width 0.15s linear;
+  pointer-events: none;
+}

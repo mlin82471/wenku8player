@@ -1,0 +1,34 @@
+[package]
+name = "wenku8-audio-archive"
+version = "1.0.0"
+description = "Wenku8 Audio Archive 3D Music Player"
+authors = ["Wenku8 Archive"]
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["rt-multi-thread", "net", "macros", "time"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "native-tls", "gzip", "stream"] }
+axum = "0.8"
+tower-http = { version = "0.6", features = ["fs"] }
+aes = "0.8"
+md-5 = "0.10"
+base64 = "0.22"
+num-bigint = "0.4"
+rand = "0.8"
+hex = "0.4"
+percent-encoding = "2"
+qrcode = { version = "0.14", default-features = false, features = ["svg"] }
+url = "2"
+
+# 体积优化：目标是把独立安装包压到最小
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+strip = true

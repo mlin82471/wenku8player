@@ -1,0 +1,1 @@
+import{d as e}from"./preload-helper-DSh1qyfD.js";import{Sc as t}from"./lucide-icons-Cn2-pGp9.js";import{ra as n}from"./temperaPalette-B65DngfP.js";import{n as r,q as i}from"./proxy-DjSoni6P.js";var a=e(t(),1);function o(e){let t=i(()=>n(e)),{isStatic:o}=(0,a.useContext)(r);if(o){let[,n]=(0,a.useState)(e);(0,a.useEffect)(()=>t.on(`change`,n),[])}return t}export{o as t};

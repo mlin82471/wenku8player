@@ -1,0 +1,107 @@
+{
+  "name": "wenku8-netease-player",
+  "version": "1.0.0",
+  "description": "Wenku8 Audio Archive - 3D 立体白盒磁带书架 × 极简音乐播放器，接入网易云音乐并集成 Folia 动效",
+  "main": "electron-main.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build",
+    "electron:start": "electron .",
+    "electron:build": "electron-builder --win",
+    "electron:build:linux": "electron-builder --linux",
+    "electron:pack": "electron-builder --win --dir",
+    "electron:pack:linux": "electron-builder --linux --dir"
+  },
+  "keywords": [
+    "netease",
+    "music",
+    "player",
+    "coverflow",
+    "wenku8",
+    "electron"
+  ],
+  "license": "MIT",
+  "author": "Wenku8 Archive",
+  "dependencies": {
+    "express": "^4.21.2",
+    "NeteaseCloudMusicApi": "^4.32.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.12.4",
+    "electron": "^45.3.0",
+    "electron-builder": "^26.18.0"
+  },
+  "build": {
+    "appId": "com.wenku8.audioarchive",
+    "productName": "Wenku8AudioArchive",
+    "electronLanguages": [
+      "zh-CN",
+      "en-US"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "electron-main.js",
+      "server.js",
+      "public/**/*",
+      "!public/**/*.bak",
+      "!public/**/*-bak",
+      "!public/**/*-bak.*",
+      "!public/index.html.bak",
+      "!public/index.html.btn-bak",
+      "app.ico",
+      "package.json"
+    ],
+    "asarUnpack": [
+      "public/assets/videos/**"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "app.ico",
+      "artifactName": "Wenku8AudioArchive-${version}-setup.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Wenku8 Audio Archive"
+    },
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "category": "AudioVideo",
+      "icon": "build/icon.png",
+      "maintainer": "Wenku8 Archive <wenku8@example.com>",
+      "vendor": "Wenku8 Archive",
+      "synopsis": "Wenku8 Audio Archive",
+      "description": "3D 立体白盒磁带书架 × 极简音乐播放器，接入网易云音乐并集成 Folia 动效",
+      "artifactName": "wenku8-audio-archive_${version}_${arch}.${ext}"
+    },
+    "deb": {
+      "depends": [
+        "libgtk-3-0",
+        "libnotify4",
+        "libnss3",
+        "libxss1",
+        "libxtst6",
+        "xdg-utils",
+        "libatspi2.0-0",
+        "libuuid1"
+      ],
+      "afterInstall": "build/linux-postinstall.sh"
+    }
+  }
+}
