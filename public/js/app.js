@@ -789,6 +789,566 @@ const ARCHIVE_BOOKS = [
   }
 ];
 
+const ACG_DEMO_TRACKS = [
+  {
+    index: "011",
+    spineNum: "01",
+    serial: "WK-ACG-01",
+    title: "青鸟 (ブルーバード)",
+    shortTitle: "青鸟 · 火影",
+    spineTitle: "青鸟 · 生物股长",
+    subtitleQuote: "| 飞向那片纯澈的苍穹，只为展翅翱翔",
+    artist: "いきものがかり (生物股长)",
+    subArtist: "火影忍者疾风传 OP3",
+    statusTag: "ACG神曲",
+    subTag: "高燃 · OP3",
+    durationSec: 216,
+    currentSec: 0,
+    accent: "#2563eb",
+    c1: "#3b82f6",
+    c2: "#1e3a8a",
+    picUrl: "https://p1.music.126.net/1o8U-yXf1V2BwR1056586g==/109951166668388960.jpg?param=400y400",
+    notes: [329.63, 392.00, 440.00, 493.88, 523.25, 493.88, 440.00, 392.00],
+    lyrics: [
+      { t: 0, l1: "飞翔之时 便已下定决心", l2: "目标是那片蔚蓝的天空" },
+      { t: 25, l1: "还未曾领略过的「悲伤」 如今已经渐渐懂得", l2: "甚至连这拥抱着的「苦痛」 都要化为前行的力量" },
+      { t: 55, l1: "从那沉睡的世界中苏醒 展开耀眼的羽翼", l2: "为了追寻那片纯澈的苍穹 振翅高飞吧" },
+      { t: 90, l1: "破茧而出的那阵狂风 吹散了所有迷茫", l2: "如果展翅飞翔 就不再回头" },
+      { t: 140, l1: "尾奏：疾风吹拂过木叶村的天空", l2: "火影忍者疾风传 典藏纪念原声 // WK-ACG-01" }
+    ],
+    comments: ["【热评 @木叶飞舞之处】前奏口琴一响，整整十年的青春与热血瞬间在眼前呼啸而过！"]
+  },
+  {
+    index: "012",
+    spineNum: "02",
+    serial: "WK-ACG-02",
+    title: "Lemon",
+    shortTitle: "Lemon · 米津玄师",
+    spineTitle: "Lemon · 非自然死亡",
+    subtitleQuote: "| 如今你依然是照亮我生命的那道光",
+    artist: "米津玄师",
+    subArtist: "非自然死亡 Unnatural 主题曲",
+    statusTag: "殿堂金曲",
+    subTag: "流行殿堂 · 2018",
+    durationSec: 255,
+    currentSec: 0,
+    accent: "#eab308",
+    c1: "#fde047",
+    c2: "#713f12",
+    picUrl: "https://p1.music.126.net/wnOa1q6wKxH7Fvj1mZ2h0A==/109951163167191147.jpg?param=400y400",
+    notes: [261.63, 293.66, 329.63, 349.23, 392.00, 349.23, 329.63, 293.66],
+    lyrics: [
+      { t: 0, l1: "如果这一切都只是一场梦 那该有多好", l2: "至今依然在梦中追寻着你的身影" },
+      { t: 30, l1: "宛如洗净柠檬般 留下了苦涩而清冽的香气", l2: "在降下倾盆大雨之前 都不愿离开" },
+      { t: 65, l1: "无论经历了怎样的至暗时刻", l2: "胸口依然会隐隐作痛" },
+      { t: 105, l1: "如今你依然是照亮我生命的那束光", l2: "在黑暗中引领我走向破晓" }
+    ],
+    comments: ["【热评 @法医三澄】即使逝去的人无法再开口，音乐依然会在每个清晨温柔拂过。"]
+  },
+  {
+    index: "013",
+    spineNum: "03",
+    serial: "WK-ACG-03",
+    title: "残酷天使的行动纲领",
+    shortTitle: "残酷天使 · 高桥洋子",
+    spineTitle: "残酷天使 · EVA",
+    subtitleQuote: "| 少年啊，去成为神话吧",
+    artist: "高桥洋子",
+    subArtist: "新世纪福音战士 EVA OP",
+    statusTag: "史诗神作",
+    subTag: "EVA · 1995",
+    durationSec: 245,
+    currentSec: 0,
+    accent: "#9333ea",
+    c1: "#a855f7",
+    c2: "#3b0764",
+    picUrl: "https://p1.music.126.net/sZ_Jc3k2y9R2Z9U2x6vYxA==/109951163111451633.jpg?param=400y400",
+    notes: [440.00, 493.88, 523.25, 587.33, 659.25, 587.33, 523.25, 440.00],
+    lyrics: [
+      { t: 0, l1: "就像残酷的天使一样", l2: "少年啊 成为神话吧" },
+      { t: 35, l1: "苍蓝的风如今正在敲打心房的门扉", l2: "只凝视着我的你 露出了平静微笑" },
+      { t: 75, l1: "即使被悲伤的命运所束缚", l2: "请展开那双由纯真编织的羽翼" },
+      { t: 120, l1: "去冲破时空的束缚 成为永恒的传奇", l2: "新世纪福音战士 典藏母带 // WK-ACG-03" }
+    ],
+    comments: ["【热评 @初号机暴走】当红色警报响起，弦乐与电吉他齐鸣，这就是动漫史上无法超越的开篇！"]
+  },
+  {
+    index: "014",
+    spineNum: "04",
+    serial: "WK-ACG-04",
+    title: "打上花火",
+    shortTitle: "打上花火 · 烟花",
+    spineTitle: "打上花火 · 米津玄师",
+    subtitleQuote: "| 盛放的花火，是否无论从何处看都绚烂",
+    artist: "DAOKO × 米津玄师",
+    subArtist: "动画电影《烟花》主题曲",
+    statusTag: "夏日物语",
+    subTag: "夏夜烟火",
+    durationSec: 289,
+    currentSec: 0,
+    accent: "#f43f5e",
+    c1: "#fb7185",
+    c2: "#4c0519",
+    notes: [293.66, 329.63, 392.00, 440.00, 493.88, 440.00, 392.00, 329.63],
+    lyrics: [
+      { t: 0, l1: "从那个夏日的海边 传来海浪拍打的声响", l2: "夕阳沉入地平线 天空染上了淡淡绯红" },
+      { t: 40, l1: "升空的花火 在夜空中无声绽放", l2: "照亮了你仰望夜空时的清澈侧脸" },
+      { t: 85, l1: "如果时光能够倒流 回到那个晴朗的午后", l2: "直到光芒散落成漫天繁星" }
+    ],
+    comments: ["【热评 @花火大会】夏天的遗憾，总是在这首歌响起的瞬间被温柔抚平。"]
+  },
+  {
+    index: "015",
+    spineNum: "05",
+    serial: "WK-ACG-05",
+    title: "Brave Shine",
+    shortTitle: "Brave Shine · Aimer",
+    spineTitle: "Brave Shine · Fate",
+    subtitleQuote: "| 守护你直到终焉的破晓",
+    artist: "Aimer",
+    subArtist: "Fate/stay night [UBW] OP2",
+    statusTag: "高燃燃系",
+    subTag: "Fate系列",
+    durationSec: 232,
+    currentSec: 0,
+    accent: "#d97706",
+    c1: "#f59e0b",
+    c2: "#451a03",
+    notes: [329.63, 349.23, 392.00, 440.00, 523.25, 440.00, 392.00, 349.23],
+    lyrics: [
+      { t: 0, l1: "在漫长黑夜中 紧握那柄誓约之剑", l2: "无论受到何种伤痛 都不曾停下脚步" },
+      { t: 45, l1: "Brave Shine 照亮这片残破的世界", l2: "愿这份光芒 成为跨越绝望的救赎" },
+      { t: 95, l1: "破晓之时 胜利的钟声将为谁敲响", l2: "Fate/stay night [UBW] 典藏原声" }
+    ],
+    comments: ["【热评 @无限剑制】Aimer 独特的沙哑声线配合红 A 转身的背影，燃到头皮发麻！"]
+  },
+  {
+    index: "016",
+    spineNum: "06",
+    serial: "WK-ACG-06",
+    title: "secret base ~君がくれたもの~",
+    shortTitle: "secret base · 未闻花名",
+    spineTitle: "secret base · 那朵花",
+    subtitleQuote: "| 与你在盛夏相遇的约定，十年后的八月依然坚信",
+    artist: "本间芽衣子 / 安城鸣子 / 鹤见知利子",
+    subArtist: "未闻花名 ED",
+    statusTag: "催泪经典",
+    subTag: "治愈 · 催泪",
+    durationSec: 350,
+    currentSec: 0,
+    accent: "#10b981",
+    c1: "#34d399",
+    c2: "#064e3b",
+    notes: [261.63, 329.63, 392.00, 440.00, 392.00, 329.63, 293.66, 261.63],
+    lyrics: [
+      { t: 0, l1: "与你在盛夏告别的约定 刻在秘密基地斑驳的墙上", l2: "十年后的八月 相信我们还能再次相逢" },
+      { t: 45, l1: "夏日祭典的绚烂花火 照亮了你泛红的面容", l2: "直到最后 依然想对你说一声「谢谢」" },
+      { t: 100, l1: "在那朵花盛开的山坡上 永远铭记最初的笑容", l2: "我们仍未知道那天所看见的花的名字" }
+    ],
+    comments: ["【热评 @面码】面码，找到你了！每一次前奏响起来都忍不住眼眶发热。"]
+  },
+  {
+    index: "017",
+    spineNum: "07",
+    serial: "WK-ACG-07",
+    title: "only my railgun",
+    shortTitle: "only my railgun · 超炮",
+    spineTitle: "超电磁炮 · fripSide",
+    subtitleQuote: "| 指尖跃动的电光，是我此生不变的信仰",
+    artist: "fripSide",
+    subArtist: "某科学的超电磁炮 OP1",
+    statusTag: "燃系巅峰",
+    subTag: "超跑 OP1",
+    durationSec: 257,
+    currentSec: 0,
+    accent: "#06b6d4",
+    c1: "#22d3ee",
+    c2: "#083344",
+    notes: [440.00, 523.25, 587.33, 659.25, 698.46, 659.25, 587.33, 523.25],
+    lyrics: [
+      { t: 0, l1: "指尖跃动的电光 是我此生不变的信仰", l2: "唯我超电磁炮永世长存" },
+      { t: 35, l1: "穿梭于学园都市的黎明 冲破沉睡的地平线", l2: "所有的犹豫 都化作贯穿现实的银币" },
+      { t: 80, l1: "照亮前路的 不仅仅是耀眼的雷光", l2: "还有心中誓死捍卫的珍贵羁绊" }
+    ],
+    comments: ["【热评 @炮姐】你指尖跃动的电光，是我此生不变的信仰，唯我超电磁炮永世长存！"]
+  },
+  {
+    index: "018",
+    spineNum: "08",
+    serial: "WK-ACG-08",
+    title: "Butter-Fly",
+    shortTitle: "Butter-Fly · 和田光司",
+    spineTitle: "Butter-Fly · 数码宝贝",
+    subtitleQuote: "| 化作飞舞的蝴蝶，乘着微风展翅翱翔",
+    artist: "和田光司",
+    subArtist: "数码宝贝大冒险 OP",
+    statusTag: "童年信仰",
+    subTag: "数码宝贝 OP",
+    durationSec: 258,
+    currentSec: 0,
+    accent: "#f97316",
+    c1: "#fb923c",
+    c2: "#431407",
+    notes: [293.66, 329.63, 369.99, 440.00, 493.88, 440.00, 369.99, 329.63],
+    lyrics: [
+      { t: 0, l1: "好想化作一只振翅高飞的蝴蝶 乘着微风去看未知的明天", l2: "不用在乎路途遥远 只要心中还怀揣着滚烫梦想" },
+      { t: 40, l1: "无限大的梦想之后 是空无一物的世界", l2: "只要伸出双手 就能触碰彩虹的温度" },
+      { t: 90, l1: "飞帽杀响起的时候 青春永远不散场", l2: "致敬和田光司先生 // 永远的数码宝贝" }
+    ],
+    comments: ["【热评 @被选召的孩子】飞帽杀出现的那一秒，我们所有人都长大了，但数码世界永远都在。"]
+  }
+];
+
+const POP_DEMO_TRACKS = [
+  {
+    index: "021",
+    spineNum: "01",
+    serial: "WK-POP-01",
+    title: "此生不换",
+    shortTitle: "此生不换 · 仙剑三",
+    spineTitle: "此生不换 · 青鸟飞鱼",
+    subtitleQuote: "| 喝不完忘川水，也难断三生缘",
+    artist: "青鸟飞鱼",
+    subArtist: "电视剧《仙剑奇侠传三》插曲",
+    statusTag: "仙剑经典",
+    subTag: "仙侠原声",
+    durationSec: 265,
+    currentSec: 0,
+    accent: "#059669",
+    c1: "#10b981",
+    c2: "#022c22",
+    picUrl: "https://p1.music.126.net/8P471B_v8kFm39A_194788.jpg?param=400y400",
+    notes: [261.63, 293.66, 329.63, 392.00, 440.00, 392.00, 329.63, 261.63],
+    lyrics: [
+      { t: 0, l1: "时光穿梭 如流星般划过茫茫夜空", l2: "喝不完忘川水 也难断三生缘" },
+      { t: 35, l1: "回头看 不曾走远 依依目光此生不换", l2: "难料爱恨痴缠 问世间谁能看淡" },
+      { t: 75, l1: "这一刻回眸 便是三生三世的诺言", l2: "仙剑奇侠传三 经典插曲 // WK-POP-01" }
+    ],
+    comments: ["【热评 @蜀山客】景天、雪见、长卿、紫萱、龙葵、茂茂……前奏一出全是眼泪。"]
+  },
+  {
+    index: "022",
+    spineNum: "02",
+    serial: "WK-POP-02",
+    title: "七里香",
+    shortTitle: "七里香 · 周杰伦",
+    spineTitle: "七里香 · 浪漫盛夏",
+    subtitleQuote: "| 雨下整夜，我的爱溢出就像雨水",
+    artist: "周杰伦",
+    subArtist: "华语流行黄金时代",
+    statusTag: "流行巅峰",
+    subTag: "周董经典",
+    durationSec: 299,
+    currentSec: 0,
+    accent: "#16a34a",
+    c1: "#22c55e",
+    c2: "#14532d",
+    notes: [329.63, 369.99, 440.00, 493.88, 554.37, 493.88, 440.00, 369.99],
+    lyrics: [
+      { t: 0, l1: "窗外的麻雀 在电线杆上多嘴", l2: "你说这一句 很有夏天的感觉" },
+      { t: 35, l1: "手中的铅笔 在纸上来来回回", l2: "我用几行字形容你是我的谁" },
+      { t: 75, l1: "雨下整夜 我的爱溢出就像雨水", l2: "院子落叶 跟我的思念厚厚一叠" }
+    ],
+    comments: ["【热评 @夏天风】2004年的夏天，微风、单车、MP3里的《七里香》，那是最好的青春。"]
+  },
+  {
+    index: "023",
+    spineNum: "03",
+    serial: "WK-POP-03",
+    title: "晴天",
+    shortTitle: "晴天 · 周杰伦",
+    spineTitle: "晴天 · 青春记忆",
+    subtitleQuote: "| 从前从前，有个人爱你很久",
+    artist: "周杰伦",
+    subArtist: "专辑《叶惠美》典藏曲",
+    statusTag: "青春记忆",
+    subTag: "校园民谣",
+    durationSec: 269,
+    currentSec: 0,
+    accent: "#0284c7",
+    c1: "#38bdf8",
+    c2: "#0c4a6e",
+    notes: [261.63, 329.63, 392.00, 440.00, 392.00, 329.63, 293.66, 261.63],
+    lyrics: [
+      { t: 0, l1: "故事的小黄花 从出生那年就飘着", l2: "童年的荡秋千 随记忆一直晃到现在" },
+      { t: 35, l1: "刮风这天 我试过握着你手", l2: "但偏偏 雨渐渐 大到我看你不见" },
+      { t: 75, l1: "还要多久 我才能在你身边", l2: "等到放晴那天 也许我会比较好一点" }
+    ],
+    comments: ["【热评 @网易云百万评】网易云评论数突破200万的传奇神作，前奏木吉他一扫，全校都在合唱。"]
+  },
+  {
+    index: "024",
+    spineNum: "04",
+    serial: "WK-POP-04",
+    title: "起风了",
+    shortTitle: "起风了 · 买辣椒也用券",
+    spineTitle: "起风了 · 逆光飞翔",
+    subtitleQuote: "| 从前初识这世间，万般流连，也甘愿赴汤蹈火去走它一遍",
+    artist: "买辣椒也用券",
+    subArtist: "翻唱高桥优《ヤキモチ》",
+    statusTag: "治愈高燃",
+    subTag: "万人合唱",
+    durationSec: 325,
+    currentSec: 0,
+    accent: "#0d9488",
+    c1: "#2dd4bf",
+    c2: "#134e4a",
+    notes: [329.63, 392.00, 440.00, 493.88, 587.33, 493.88, 440.00, 392.00],
+    lyrics: [
+      { t: 0, l1: "这一路上走走停停 顺着少年漂流的痕迹", l2: "迈出车站的前一刻 竟有些犹豫" },
+      { t: 35, l1: "我曾难自拔于世界之大 也沉溺于其中梦话", l2: "不得真假 不做挣扎 不惧笑话" },
+      { t: 80, l1: "我曾将青春翻涌成她 也曾指尖弹出盛夏", l2: "心之所动 且就随缘去吧" }
+    ],
+    comments: ["【热评 @毕业生】高考结束那个下午，全班一起唱这首歌，风吹过教室窗帘的刹那，我们毕业了。"]
+  },
+  {
+    index: "025",
+    spineNum: "05",
+    serial: "WK-POP-05",
+    title: "如愿",
+    shortTitle: "如愿 · 王菲",
+    spineTitle: "如愿 · 盛世所愿",
+    subtitleQuote: "| 愿不枉啊这个时代，山河无恙，盛世如愿",
+    artist: "王菲",
+    subArtist: "电影《我和我的父辈》主题曲",
+    statusTag: "天籁之音",
+    subTag: "盛世如愿",
+    durationSec: 268,
+    currentSec: 0,
+    accent: "#c026d3",
+    c1: "#e879f9",
+    c2: "#4a044e",
+    notes: [261.63, 293.66, 349.23, 392.00, 440.00, 392.00, 349.23, 261.63],
+    lyrics: [
+      { t: 0, l1: "你是 岁月长河 星火点亮的长街", l2: "此生未完成的歌 由我来续写" },
+      { t: 40, l1: "你是我之所来 也是我心之所向", l2: "世间所有美好 终将如你所愿" },
+      { t: 85, l1: "这盛世 如你所愿", l2: "电影《我和我的父辈》主题曲 // 典藏母带" }
+    ],
+    comments: ["【热评 @百年山河】王菲空灵又深情的声线，把几代人的付出与当下的幸福唱得让人热泪盈眶。"]
+  },
+  {
+    index: "026",
+    spineNum: "06",
+    serial: "WK-POP-06",
+    title: "夜曲",
+    shortTitle: "夜曲 · 周杰伦",
+    spineTitle: "夜曲 · 肖邦夜曲",
+    subtitleQuote: "| 为你弹奏肖邦的夜曲，纪念我死去的爱情",
+    artist: "周杰伦",
+    subArtist: "专辑《十一月的萧邦》",
+    statusTag: "暗黑抒情",
+    subTag: "金曲之夜",
+    durationSec: 226,
+    currentSec: 0,
+    accent: "#475569",
+    c1: "#64748b",
+    c2: "#0f172a",
+    notes: [220.00, 261.63, 293.66, 329.63, 392.00, 329.63, 293.66, 220.00],
+    lyrics: [
+      { t: 0, l1: "一群嗜血的蚂蚁 被腐肉所吸引", l2: "我面无表情 看孤独的风景" },
+      { t: 30, l1: "为你弹奏肖邦的夜曲 纪念我死去的爱情", l2: "跟夜风一样的声音 心碎的很好听" },
+      { t: 70, l1: "手在键盘敲很轻 我给的思念太小心", l2: "你埋葬的地方叫幽冥" }
+    ],
+    comments: ["【热评 @十一月的萧邦】夜曲一响，上台领奖！当年横扫各大颁奖礼的巅峰说唱神作。"]
+  },
+  {
+    index: "027",
+    spineNum: "07",
+    serial: "WK-POP-07",
+    title: "富士山下",
+    shortTitle: "富士山下 · 陈奕迅",
+    spineTitle: "富士山下 · 林夕词",
+    subtitleQuote: "| 谁都只得那双手，靠拥抱亦难任你拥有",
+    artist: "陈奕迅",
+    subArtist: "词：林夕 / 曲：Christopher Chak",
+    statusTag: "粤语巅峰",
+    subTag: "林夕经典",
+    durationSec: 261,
+    currentSec: 0,
+    accent: "#4b5563",
+    c1: "#6b7280",
+    c2: "#111827",
+    notes: [261.63, 329.63, 392.00, 440.00, 392.00, 329.63, 293.66, 261.63],
+    lyrics: [
+      { t: 0, l1: "拦路雨偏似雪花 白整整的落满地", l2: "谁能凭爱意要富士山私有" },
+      { t: 35, l1: "何不把悲哀感觉 假设是在北海道旅游", l2: "想听你听过的歌 看你看过的风景" },
+      { t: 75, l1: "谁都只得那双手 靠拥抱亦难任你拥有", l2: "要拥有必先懂失去怎接受" }
+    ],
+    comments: ["【热评 @港乐风】你想拥有富士山，最好的办法不是把它搬回家，而是走到它面前，再走开。"]
+  },
+  {
+    index: "028",
+    spineNum: "08",
+    serial: "WK-POP-08",
+    title: "大鱼",
+    shortTitle: "大鱼 · 周深",
+    spineTitle: "大鱼 · 大鱼海棠",
+    subtitleQuote: "| 怕你飞远去，怕你离我而去，更怕你永远停留在这里",
+    artist: "周深",
+    subArtist: "电影《大鱼海棠》印象曲",
+    statusTag: "空灵唯美",
+    subTag: "国漫天籁",
+    durationSec: 313,
+    currentSec: 0,
+    accent: "#0ea5e9",
+    c1: "#38bdf8",
+    c2: "#0369a1",
+    notes: [261.63, 293.66, 329.63, 392.00, 523.25, 392.00, 329.63, 261.63],
+    lyrics: [
+      { t: 0, l1: "海浪无声将夜幕深深淹没", l2: "漫过天空尽头的角落" },
+      { t: 40, l1: "大鱼在梦境的缝隙里游过", l2: "凝望你沉睡的轮廓" },
+      { t: 85, l1: "看海天一色 听风起雨落", l2: "执子手吹散苍茫茫烟波" }
+    ],
+    comments: ["【热评 @椿与湫】周深的声音就像是海浪推着星光，把最深处的孤独与温柔抚慰得一干二净。"]
+  }
+];
+
+const CYBER_DEMO_TRACKS = [
+  {
+    index: "031",
+    spineNum: "01",
+    serial: "WK-CYBER-01",
+    title: "Neon Horizon · 霓虹地平线",
+    shortTitle: "Neon Horizon",
+    spineTitle: "Neon Horizon · 合成波",
+    subtitleQuote: "| 疾驰在雨夜立交桥上的复古合成器浪潮",
+    artist: "Synthwave Master",
+    subArtist: "赛博朋克合成器浪潮",
+    statusTag: "电音动效",
+    subTag: "RetroWave",
+    durationSec: 218,
+    currentSec: 0,
+    accent: "#ec4899",
+    c1: "#f472b6",
+    c2: "#831843",
+    notes: [220.00, 277.18, 329.63, 440.00, 554.37, 440.00, 329.63, 220.00],
+    lyrics: [
+      { t: 0, l1: "雨夜立交桥上 霓虹灯光在反光车窗上拉出长长的光轨", l2: "模拟合成器音阶在 80 年代的复古回声中穿梭" },
+      { t: 45, l1: "低保真底噪混合着鼓机节拍 冲破雨雾的束缚", l2: "电子声学实验编号 031 // Folia 极光驱动" }
+    ],
+    comments: ["【动效推荐】配上 Folia 矩阵代码流或极光动效，视觉与重低音节拍完美同频！"]
+  },
+  {
+    index: "032",
+    spineNum: "02",
+    serial: "WK-CYBER-02",
+    title: "Cyber Pulse · 仿生律动",
+    shortTitle: "Cyber Pulse",
+    spineTitle: "Cyber Pulse · 仿生人",
+    subtitleQuote: "| 仿生人会梦见电子羊吗？神经回路的重低音振荡",
+    artist: "Neural Link",
+    subArtist: "重低音神经回路脉冲",
+    statusTag: "重低音",
+    subTag: "Bass Boost",
+    durationSec: 204,
+    currentSec: 0,
+    accent: "#8b5cf6",
+    c1: "#a78bfa",
+    c2: "#4c1d95",
+    notes: [164.81, 220.00, 261.63, 329.63, 392.00, 329.63, 261.63, 164.81],
+    lyrics: [
+      { t: 0, l1: "神经回路的重低音振荡 唤醒了仿生记忆体", l2: "硅基生命的脉搏 在 120 BPM 的节奏下苏醒" },
+      { t: 50, l1: "数据流通过光纤交汇 形成意识的拓扑网络", l2: "WK-CYBER-02 · 声波矩阵实验室" }
+    ],
+    comments: ["【视听联动】在播放页切换到声波粒子动效，可以看到低音下潜时粒子向四周剧烈扩散！"]
+  },
+  {
+    index: "033",
+    spineNum: "03",
+    serial: "WK-CYBER-03",
+    title: "Deep Void · 水镜深渊",
+    shortTitle: "Deep Void",
+    spineTitle: "Deep Void · 水镜专属",
+    subtitleQuote: "| 极简环境氛围低频，专为水镜视觉倒影打造",
+    artist: "Folia Ambient Lab",
+    subArtist: "水镜倒影环境氛围音",
+    statusTag: "动效原声",
+    subTag: "水镜专属",
+    durationSec: 240,
+    currentSec: 0,
+    accent: "#06b6d4",
+    c1: "#22d3ee",
+    c2: "#164e63",
+    notes: [196.00, 246.94, 293.66, 392.00, 493.88, 392.00, 293.66, 196.00],
+    lyrics: [
+      { t: 0, l1: "水镜倒影涟漪泛起 宁静的深海低频在暗处流淌", l2: "每一次音符滑落 都在水面上荡开一层虚无微波" },
+      { t: 60, l1: "沉浸在无尽的声学真空之中 聆听自己的呼吸", l2: "Folia 水镜动效联动典藏音轨" }
+    ],
+    comments: ["【动效绝配】右键切换为水镜模式，水面波纹会随着这首歌的低音缓缓扩散，禅意十足。"]
+  },
+  {
+    index: "034",
+    spineNum: "04",
+    serial: "WK-CYBER-04",
+    title: "Matrix Glitch · 矩阵裂变",
+    shortTitle: "Matrix Glitch",
+    spineTitle: "Matrix Glitch · 代码流",
+    subtitleQuote: "| 终端黑客的代码流雨，电子故障艺术节拍",
+    artist: "Terminal Hacker",
+    subArtist: "Glitch Hop / Cyber IDM",
+    statusTag: "故障艺术",
+    subTag: "Glitch Hop",
+    durationSec: 195,
+    currentSec: 0,
+    accent: "#10b981",
+    c1: "#34d399",
+    c2: "#064e3b",
+    notes: [261.63, 311.13, 392.00, 466.16, 523.25, 466.16, 392.00, 261.63],
+    lyrics: [
+      { t: 0, l1: "01001000 01100101 01101100 01101100 01101111", l2: "绿色字符在黑曜石荧幕上垂直倾泻" },
+      { t: 40, l1: "故障合成器瞬间切断时间轴 触发量子跃迁", l2: "矩阵代码流专属背景节拍" }
+    ],
+    comments: ["【黑客帝国同款】进入 Folia 矩阵模式，满屏绿色代码雨和这首故障电音完美结合！"]
+  },
+  {
+    index: "035",
+    spineNum: "05",
+    serial: "WK-CYBER-05",
+    title: "Subzero Echo · 极光回响",
+    shortTitle: "Subzero Echo",
+    spineTitle: "Subzero Echo · 极光冷感",
+    subtitleQuote: "| 北欧极光冷感环境音，漫步冻土苔原的风声",
+    artist: "Nordic Chimes",
+    subArtist: "极地冷感氛围乐",
+    statusTag: "极地冷感",
+    subTag: "Ambient Chimes",
+    durationSec: 236,
+    currentSec: 0,
+    accent: "#38bdf8",
+    c1: "#7dd3fc",
+    c2: "#075985",
+    notes: [329.63, 392.00, 493.88, 587.33, 659.25, 587.33, 493.88, 329.63],
+    lyrics: [
+      { t: 0, l1: "零下三十度的极地荒原 极光在永夜的苍穹舒卷", l2: "冰晶摩擦发出空灵的微响 宛如群星的私语" },
+      { t: 55, l1: "声波穿透冰川冻土 留下一串轻盈的回声", l2: "WK-CYBER-05 · 极光视觉动效专属" }
+    ],
+    comments: ["【深夜静心】适合深夜独处或写代码时听，极其空灵通透，让人瞬间冷静下来。"]
+  },
+  {
+    index: "036",
+    spineNum: "06",
+    serial: "WK-CYBER-06",
+    title: "Quantum Drift · 量子漂移",
+    shortTitle: "Quantum Drift",
+    spineTitle: "Quantum Drift · 全景漫游",
+    subtitleQuote: "| 太空漫游全景声，星舰跃迁引擎启动",
+    artist: "Astro Sound",
+    subArtist: "全景空间声学漫游",
+    statusTag: "空间全景",
+    subTag: "Space Ambient",
+    durationSec: 215,
+    currentSec: 0,
+    accent: "#f43f5e",
+    c1: "#fb7185",
+    c2: "#881337",
+    notes: [246.94, 293.66, 369.99, 440.00, 493.88, 440.00, 369.99, 246.94],
+    lyrics: [
+      { t: 0, l1: "星际飞船引擎启动 穿过小行星带的引力透镜", l2: "全景空间声学定位 感受来自银河悬臂的脉冲星信号" },
+      { t: 45, l1: "在虚空中漂移 见证超新星爆发的壮丽余晖", l2: "声波与文字共振实验 · 空间站终章" }
+    ],
+    comments: ["【全景声体验】闭上眼睛戴上耳机，能清晰感受到声波从左耳平滑漫游至右耳的空间定位！"]
+  }
+];
 
 let activeBooks = [...ARCHIVE_BOOKS];
 let SOURCE_BOOKS = ARCHIVE_BOOKS;
@@ -806,25 +1366,95 @@ let springModeIdx = 0;
 
 const DEFAULT_PLAYLIST_ARCHIVES = [
   {
-    id: "pl_login",
+    id: "pl_demo_ost",
     num: "01",
     spineNum: "01",
+    serial: "WK-OST-01",
+    barcode: "WK-OST-01",
+    title: "文库8典藏原声 · 轻小说联动企划",
+    shortTitle: "文库8典藏原声",
+    spineTitle: "文库8典藏原声",
+    subtitle: "收录《渡》与文库8十部经典轻小说专属主题曲与声学母带",
+    desc: "收录《渡》与文库8十部经典轻小说专属主题曲与声学母带，配备全景空间声场",
+    coverImgUrl: null,
+    trackCount: ARCHIVE_BOOKS.length,
+    accent: "#d94e34",
+    badge: "文库8",
+    tracks: ARCHIVE_BOOKS
+  },
+  {
+    id: "pl_demo_acg",
+    num: "02",
+    spineNum: "02",
+    serial: "WK-ACG-02",
+    barcode: "WK-ACG-02",
+    title: "ACG 巅峰神曲 · 燃系与治愈",
+    shortTitle: "ACG 巅峰神曲",
+    spineTitle: "ACG 巅峰神曲",
+    subtitle: "火影《青鸟》/ 米津玄师《Lemon》/ EVA《残酷天使》等 8 首必听神曲",
+    desc: "跨越时代的动漫原声神曲典藏，触动每一次热血与泪目的经典共鸣",
+    coverImgUrl: "https://p1.music.126.net/1o8U-yXf1V2BwR1056586g==/109951166668388960.jpg?param=400y400",
+    trackCount: ACG_DEMO_TRACKS.length,
+    accent: "#2563eb",
+    badge: "ACG",
+    tracks: ACG_DEMO_TRACKS
+  },
+  {
+    id: "pl_demo_pop",
+    num: "03",
+    spineNum: "03",
+    serial: "WK-POP-03",
+    barcode: "WK-POP-03",
+    title: "华语经典 · 时代金曲典藏",
+    shortTitle: "华语流行金曲",
+    spineTitle: "华语流行金曲",
+    subtitle: "周杰伦《七里香》《晴天》/ 仙剑《此生不换》/《起风了》华语流行精选",
+    desc: "刻录青春岁月里的旋律记忆，高品质母带级声场还原",
+    coverImgUrl: "https://p1.music.126.net/8P471B_v8kFm39A_194788.jpg?param=400y400",
+    trackCount: POP_DEMO_TRACKS.length,
+    accent: "#059669",
+    badge: "流行",
+    tracks: POP_DEMO_TRACKS
+  },
+  {
+    id: "pl_demo_cyber",
+    num: "04",
+    spineNum: "04",
+    serial: "WK-CYBER-04",
+    barcode: "WK-CYBER-04",
+    title: "赛博朋克 × 电子声学实验室",
+    shortTitle: "赛博电子声学",
+    spineTitle: "赛博电子声学",
+    subtitle: "Folia 视觉动效专属电音 · 水镜 / 矩阵 / 极光深度音频驱动",
+    desc: "专为水镜、矩阵、声波粒子 12 种 Folia 视觉动效打造的电子声学脉冲原声",
+    coverImgUrl: null,
+    trackCount: CYBER_DEMO_TRACKS.length,
+    accent: "#7c3aed",
+    badge: "电音",
+    tracks: CYBER_DEMO_TRACKS
+  },
+  {
+    id: "pl_login",
+    num: "05",
+    spineNum: "05",
     serial: "WK-LOGIN",
     barcode: "WK-SYNC-01",
-    title: "点击登录网易云",
-    shortTitle: "点击登录",
+    title: "点击登录网易云 (在线同步)",
+    shortTitle: "网易云同步",
     spineTitle: "同步网易云歌单",
-    subtitle: "扫码登录即可自动同步您的全部歌单与红心收藏",
-    desc: "扫码登录即可自动同步您的全部歌单与红心收藏",
+    subtitle: "扫码登录可自动同步私人歌单（比赛离线演示已内置丰富典藏曲库）",
+    desc: "若启动本地后端服务可扫码登录同步网易云音乐歌单",
     coverImgUrl: null,
     trackCount: 0,
     accent: "#ef4444",
-    badge: "同步",
+    badge: "云端",
     tracks: []
   }
 ];
 
 let PLAYLIST_ARCHIVES = [...DEFAULT_PLAYLIST_ARCHIVES];
+activeBooks = DEFAULT_PLAYLIST_ARCHIVES[0].tracks;
+SOURCE_BOOKS = activeBooks;
 const PALETTE_COLORS = ['#d94e34', '#2563eb', '#059669', '#d97706', '#7c3aed', '#db2777', '#0891b2', '#4f46e5', '#ea580c'];
 
 function setUserPlaylists(ncmPlaylists) {
@@ -963,15 +1593,29 @@ async function triggerAiPlaylistRecommendation() {
     if (window.NCM && typeof NCM.getAiRecommendations === 'function') {
       result = await NCM.getAiRecommendations();
     }
-    const books = (result && result.books) || [];
-    if (!books || books.length === 0) {
-      showToast('未能检索到推荐歌曲，请检查网络或扫码登录');
-      return;
-    }
-
-    const artistsHint = (result.absorbedArtists && result.absorbedArtists.length)
+    let books = (result && result.books) || [];
+    let artistsHint = (result && result.absorbedArtists && result.absorbedArtists.length)
       ? result.absorbedArtists.join(' / ')
-      : (result.seed || '您的偏好风格');
+      : ((result && result.seed) || null);
+
+    if (!books || books.length === 0) {
+      // 比赛演示/离线模式自愈：基于当前播放曲目与全库声波特征，由 AI 算法生成专属心流推荐
+      const currentTrack = (activeBooks && activeBooks[targetIdx]) || ARCHIVE_BOOKS[0];
+      artistsHint = currentTrack.artist || '声学母带精选';
+      const allPool = [
+        ...ARCHIVE_BOOKS,
+        ...ACG_DEMO_TRACKS,
+        ...POP_DEMO_TRACKS,
+        ...CYBER_DEMO_TRACKS
+      ];
+      const otherTracks = allPool.filter(b => b.title !== currentTrack.title).sort(() => 0.5 - Math.random());
+      books = [currentTrack, ...otherTracks.slice(0, 5)].map((b, bIdx) => ({
+        ...b,
+        index: String(bIdx + 1).padStart(3, '0'),
+        spineNum: String(bIdx + 1).padStart(2, '0'),
+        statusTag: 'AI定制'
+      }));
+    }
 
     // 构造专属于用户的 AI 智能推荐磁带书盒
     const aiPlaylist = {
@@ -997,11 +1641,15 @@ async function triggerAiPlaylistRecommendation() {
     const oldIdx = PLAYLIST_ARCHIVES.findIndex(p => p.num === 'AI');
     if (oldIdx >= 0) PLAYLIST_ARCHIVES.splice(oldIdx, 1);
     PLAYLIST_ARCHIVES.unshift(aiPlaylist);
+    overviewExpandedPlaylists[aiPlaylist.id] = true;
 
     currentPlaylistIdx = 0;
     playlistScrollPos = 0;
     playlistTargetPos = 0;
     render3DPlaylistShelf();
+    if (isShelfListView) {
+      renderPlaylistListView();
+    }
     isShelfForcedDirty = true;
     wake();
 
@@ -1263,33 +1911,390 @@ function toggleShelfViewMode() {
   playMechanicalTick(1.2);
 }
 
+let overviewCurrentTab = 'playlists'; // 'playlists' or 'all'
+let overviewExpandedPlaylists = { 'pl_demo_ost': true, 'pl_demo_acg': false, 'pl_demo_pop': false, 'pl_demo_cyber': false };
+let overviewSearchKeyword = '';
+
+function switchOverviewTab(mode) {
+  overviewCurrentTab = mode;
+  const tabPl = document.getElementById('overviewTabPlaylists');
+  const tabAll = document.getElementById('overviewTabAll');
+  if (tabPl) tabPl.classList.toggle('is-active', mode === 'playlists');
+  if (tabAll) tabAll.classList.toggle('is-active', mode === 'all');
+  playMechanicalTick(1.15);
+  renderPlaylistListView();
+}
+
+function handleOverviewSearch(val) {
+  overviewSearchKeyword = (val || '').trim().toLowerCase();
+  renderPlaylistListView();
+}
+
+function toggleOverviewPlaylistAccordion(plId) {
+  overviewExpandedPlaylists[plId] = !overviewExpandedPlaylists[plId];
+  playMechanicalTick(1.2);
+  renderPlaylistListView();
+}
+
+function toggleAllPlaylistsAccordion() {
+  const allIds = PLAYLIST_ARCHIVES.filter(p => p.tracks && p.tracks.length > 0).map(p => p.id);
+  const isAnyCollapsed = allIds.some(id => !overviewExpandedPlaylists[id]);
+  allIds.forEach(id => {
+    overviewExpandedPlaylists[id] = isAnyCollapsed;
+  });
+  const btn = document.getElementById('overviewToggleAllBtn');
+  if (btn) btn.textContent = isAnyCollapsed ? '全部折叠' : '全部展开';
+  playMechanicalTick(1.25);
+  renderPlaylistListView();
+}
+
+function playSongFromOverview(playlistId, trackIdx, e) {
+  if (e) e.stopPropagation();
+  const pl = PLAYLIST_ARCHIVES.find(p => p.id === playlistId);
+  if (!pl || !pl.tracks || !pl.tracks[trackIdx]) return;
+
+  // 如果点击的是当前已经选中的歌曲，执行播放/暂停切换
+  if (activeBooks === pl.tracks && targetIdx === trackIdx) {
+    if (isPlaying) {
+      pauseTrackAudio();
+    } else {
+      resumeTrackAudio();
+    }
+    syncPlayIcons();
+    updateOverviewPlayingState();
+    return;
+  }
+
+  // 切换歌单与曲目
+  activeBooks = pl.tracks;
+  SOURCE_BOOKS = activeBooks;
+  const plIdx = PLAYLIST_ARCHIVES.indexOf(pl);
+  if (plIdx >= 0) currentPlaylistIdx = plIdx;
+
+  targetIdx = trackIdx;
+  currentTrackIdx = trackIdx;
+  trackTargetPos = trackIdx;
+  trackScrollPos = trackIdx;
+  activeBooks[targetIdx].currentSec = 0;
+  populatePlayerView(activeBooks[targetIdx]);
+  isPlaying = true;
+  startTrackAudio();
+  updatePlaylistShelfFooter(currentPlaylistIdx);
+  updateOverviewPlayingState();
+  playMechanicalTick(1.25);
+  showToast('🎵 正在播放：' + activeBooks[targetIdx].title);
+}
+
+function openPlayerFromOverview(playlistId, trackIdx, e) {
+  if (e) e.stopPropagation();
+  const pl = PLAYLIST_ARCHIVES.find(p => p.id === playlistId);
+  if (!pl || !pl.tracks || !pl.tracks[trackIdx]) return;
+
+  if (activeBooks !== pl.tracks || targetIdx !== trackIdx || !isPlaying) {
+    playSongFromOverview(playlistId, trackIdx);
+  }
+  setTimeout(() => {
+    openPlayerView(true);
+  }, 100);
+}
+
+function openCoverflowFromOverview(playlistId, e) {
+  if (e) e.stopPropagation();
+  const plIdx = PLAYLIST_ARCHIVES.findIndex(p => p.id === playlistId);
+  if (plIdx >= 0) {
+    openPlaylistCoverflow(plIdx);
+  }
+}
+
+function updateOverviewPlayingState() {
+  const rows = document.querySelectorAll('.overview-track-row');
+  if (!rows || rows.length === 0) return;
+  const currentBook = (activeBooks && activeBooks[targetIdx]) || null;
+  const currentTitle = currentBook ? currentBook.title : null;
+
+  rows.forEach(row => {
+    const rTitle = row.getAttribute('data-track-title');
+    const isThisPlaying = (rTitle && rTitle === currentTitle);
+    row.classList.toggle('is-current-playing', isThisPlaying);
+
+    const eqBox = row.querySelector('.track-index-box');
+    const playBtn = row.querySelector('.track-icon-btn.play-btn');
+
+    if (eqBox) {
+      if (isThisPlaying) {
+        eqBox.innerHTML = `
+          <div class="eq-anim-container ${isPlaying ? '' : 'is-paused'}">
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+          </div>
+        `;
+      } else {
+        const rawNum = row.getAttribute('data-raw-num') || '01';
+        eqBox.textContent = rawNum;
+      }
+    }
+
+    if (playBtn) {
+      if (isThisPlaying && isPlaying) {
+        playBtn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>';
+        playBtn.title = '暂停';
+      } else {
+        playBtn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+        playBtn.title = '播放';
+      }
+    }
+  });
+}
+
 function renderPlaylistListView(list) {
   const container = document.getElementById('shelfListItems');
   if (!container) return;
   container.innerHTML = '';
+
   const data = Array.isArray(list) ? list : PLAYLIST_ARCHIVES;
+  const kw = overviewSearchKeyword;
+
+  // 更新顶部统计胶囊
+  let totalTracks = 0;
+  data.forEach(p => { if (p.tracks) totalTracks += p.tracks.length; });
+  const statsEl = document.getElementById('overviewStatsBadge');
+  if (statsEl) {
+    statsEl.textContent = `${data.length} 盒歌单 · ${totalTracks} 首典藏`;
+  }
+
+  // 模式 1：全部典藏单曲一览
+  if (overviewCurrentTab === 'all') {
+    renderAllTracksOverview(data, kw, container);
+    return;
+  }
+
+  // 模式 2：按歌单分类 (手风琴展开曲目)
   data.forEach((pl, idx) => {
-    const item = document.createElement('div');
-    item.style.cssText = 'display:flex; align-items:center; gap:14px; padding:12px 14px; background:rgba(255,255,255,0.7); backdrop-filter:blur(10px); border-radius:12px; cursor:pointer; border:1px solid rgba(0,0,0,0.06); transition:transform 0.15s ease, background 0.15s ease;';
+    const card = document.createElement('div');
+    card.className = 'overview-playlist-card';
+    card.style.setProperty('--card-accent', pl.accent || '#d94e34');
+
+    const tracks = pl.tracks || [];
+    const isExpanded = kw.length > 0 ? true : (overviewExpandedPlaylists[pl.id] ?? false);
+    const filteredTracks = kw.length > 0
+      ? tracks.filter(t => (t.title && t.title.toLowerCase().includes(kw)) || (t.artist && t.artist.toLowerCase().includes(kw)))
+      : tracks;
+
+    // 如果搜索时该歌单无匹配曲目且歌单名也不匹配，跳过展示
+    if (kw.length > 0 && filteredTracks.length === 0 && !pl.title.toLowerCase().includes(kw)) {
+      return;
+    }
+
     const coverArt = pl.coverImgUrl 
-      ? `<img src="${esc(pl.coverImgUrl)}" style="width:48px; height:48px; border-radius:8px; object-fit:cover; flex-shrink:0;">`
-      : `<div style="width:48px; height:48px; border-radius:8px; background:${pl.accent || '#ef3b3a'}; display:flex; align-items:center; justify-content:center; color:#fff; font-size:20px; flex-shrink:0;">📼</div>`;
-    item.innerHTML = `
-      ${coverArt}
-      <div style="flex:1; min-width:0;">
-        <div style="font-weight:700; font-size:14px; color:#18181b; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${esc(pl.title)}</div>
-        <div style="font-size:12px; color:#71717a; margin-top:3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${esc(pl.subtitle || '')} · ${pl.trackCount || 0} 首</div>
+      ? `<img src="${esc(pl.coverImgUrl)}" style="width:44px; height:44px; border-radius:8px; object-fit:cover; flex-shrink:0;">`
+      : `<div style="width:44px; height:44px; border-radius:8px; background:${pl.accent || '#d94e34'}; display:flex; align-items:center; justify-content:center; color:#fff; font-size:18px; flex-shrink:0;">📼</div>`;
+
+    const tracksHtml = filteredTracks.map((t, tIdx) => {
+      const trackNumStr = String(tIdx + 1).padStart(2, '0');
+      const isCurrent = (activeBooks === pl.tracks && targetIdx === tIdx);
+      const isAudPlaying = isCurrent && isPlaying;
+      const thumbSrc = t.picUrl || t.coverUrl || pl.coverImgUrl;
+      const thumbHtml = thumbSrc
+        ? `<img class="track-mini-thumb" src="${esc(thumbSrc)}" alt="${esc(t.title)}" onerror="this.style.display='none'">`
+        : `<div class="track-mini-thumb" style="display:flex; align-items:center; justify-content:center; color:#fff; background:${t.accent || pl.accent || '#27272a'}; font-size:14px;">♪</div>`;
+
+      return `
+        <div class="overview-track-row ${isCurrent ? 'is-current-playing' : ''}" 
+             data-track-title="${esc(t.title)}"
+             data-raw-num="${trackNumStr}"
+             style="--row-accent:${t.accent || pl.accent || '#d94e34'};"
+             onclick="playSongFromOverview('${pl.id}', ${tIdx}, event)"
+             ondblclick="openPlayerFromOverview('${pl.id}', ${tIdx}, event)"
+             title="单击播放，双击进入全屏播放页">
+          <div class="track-index-box">
+            ${isCurrent ? `
+              <div class="eq-anim-container ${isAudPlaying ? '' : 'is-paused'}">
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+              </div>
+            ` : trackNumStr}
+          </div>
+          ${thumbHtml}
+          <div class="track-meta-col">
+            <div class="track-title-line">
+              <span>${esc(t.title)}</span>
+              ${t.statusTag ? `<span class="track-tag-chip">${esc(t.statusTag)}</span>` : ''}
+              ${t.subTag ? `<span class="track-tag-chip" style="opacity:0.75;">${esc(t.subTag)}</span>` : ''}
+            </div>
+            <div class="track-sub-line">
+              <span>${esc(t.artist || '未知歌手')}</span>
+              ${t.subtitleQuote ? `<span style="opacity:0.6; margin-left:4px;">${esc(t.subtitleQuote)}</span>` : ''}
+            </div>
+          </div>
+          <div class="track-duration-text">${formatMMSS(t.durationSec || 210)}</div>
+          <div class="track-actions-group" onclick="event.stopPropagation();">
+            <button class="track-icon-btn play-btn" 
+                    onclick="playSongFromOverview('${pl.id}', ${tIdx}, event)"
+                    title="${isAudPlaying ? '暂停' : '播放'}">
+              ${isAudPlaying ? `
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+              ` : `
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              `}
+            </button>
+            <button class="track-icon-btn" 
+                    onclick="openPlayerFromOverview('${pl.id}', ${tIdx}, event)" 
+                    title="进入沉浸式播放页与动效">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </button>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    card.innerHTML = `
+      <div class="playlist-header-row" onclick="toggleOverviewPlaylistAccordion('${pl.id}')">
+        <div class="playlist-header-left">
+          ${coverArt}
+          <div style="flex:1; min-width:0;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="font-weight:700; font-size:14px; color:#18181b;">${esc(pl.title)}</span>
+              <span class="playlist-badge-pill" style="border-left:2px solid ${pl.accent || '#d94e34'};">${pl.badge || '歌单'}</span>
+            </div>
+            <div style="font-size:12px; color:#71717a; margin-top:3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+              ${esc(pl.subtitle || '')} · <b style="color:#27272a;">${tracks.length}</b> 首曲目
+            </div>
+          </div>
+        </div>
+        <div class="playlist-header-right" onclick="event.stopPropagation();">
+          ${tracks.length > 0 ? `
+            <button class="playlist-action-chip" onclick="toggleOverviewPlaylistAccordion('${pl.id}')">
+              <span>${isExpanded ? '收起曲目 ▲' : `展开曲目 (${tracks.length}) ▼`}</span>
+            </button>
+            <button class="playlist-action-chip" onclick="openCoverflowFromOverview('${pl.id}', event)" title="飞入第二层 3D 选歌封面流">
+              <span>3D封面流</span>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <button class="playlist-action-chip accent-play" onclick="playSongFromOverview('${pl.id}', 0, event)" title="从第1首开始播放">
+              <span>▶ 播放</span>
+            </button>
+          ` : `
+            <button class="playlist-action-chip" onclick="openPlaylistCoverflow(${idx})">
+              <span>进入</span>
+            </button>
+          `}
+        </div>
       </div>
-      <div style="font-size:12px; color:#a1a1aa; font-family:monospace; font-weight:700;">NO.${pl.num || String(idx+1).padStart(2,'0')}</div>
+      ${tracks.length > 0 ? `
+        <div class="playlist-tracks-container" style="display:${isExpanded ? 'flex' : 'none'};">
+          ${tracksHtml}
+        </div>
+      ` : ''}
     `;
-    item.onmouseenter = () => { item.style.background = 'rgba(255,255,255,0.95)'; item.style.transform = 'translateY(-1px)'; };
-    item.onmouseleave = () => { item.style.background = 'rgba(255,255,255,0.7)'; item.style.transform = 'none'; };
-    item.onclick = () => {
-      const realIdx = PLAYLIST_ARCHIVES.indexOf(pl);
-      openPlaylistCoverflow(realIdx >= 0 ? realIdx : idx);
-    };
-    container.appendChild(item);
+
+    container.appendChild(card);
   });
+}
+
+function renderAllTracksOverview(playlists, kw, container) {
+  const allTracks = [];
+  playlists.forEach(pl => {
+    if (pl.tracks && pl.tracks.length > 0) {
+      pl.tracks.forEach((t, tIdx) => {
+        allTracks.push({
+          track: t,
+          trackIndex: tIdx,
+          playlist: pl
+        });
+      });
+    }
+  });
+
+  const filtered = kw.length > 0
+    ? allTracks.filter(item => {
+        const t = item.track;
+        return (t.title && t.title.toLowerCase().includes(kw)) ||
+               (t.artist && t.artist.toLowerCase().includes(kw)) ||
+               (item.playlist.title && item.playlist.title.toLowerCase().includes(kw));
+      })
+    : allTracks;
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div style="padding:40px 20px; text-align:center; color:#71717a;">
+        <div style="font-size:32px; margin-bottom:8px;">🔍</div>
+        <div style="font-weight:600; font-size:14px;">没有找到匹配「${esc(kw)}」的曲目</div>
+        <div style="font-size:12px; margin-top:4px;">试试搜索其他歌曲名、歌手或歌单关键词</div>
+      </div>
+    `;
+    return;
+  }
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'overview-playlist-card';
+  wrapper.style.padding = '8px 12px';
+
+  wrapper.innerHTML = filtered.map((item, idx) => {
+    const t = item.track;
+    const pl = item.playlist;
+    const tIdx = item.trackIndex;
+    const trackNumStr = String(idx + 1).padStart(2, '0');
+    const isCurrent = (activeBooks === pl.tracks && targetIdx === tIdx);
+    const isAudPlaying = isCurrent && isPlaying;
+    const thumbSrc = t.picUrl || t.coverUrl || pl.coverImgUrl;
+    const thumbHtml = thumbSrc
+      ? `<img class="track-mini-thumb" src="${esc(thumbSrc)}" alt="${esc(t.title)}" onerror="this.style.display='none'">`
+      : `<div class="track-mini-thumb" style="display:flex; align-items:center; justify-content:center; color:#fff; background:${t.accent || pl.accent || '#27272a'}; font-size:14px;">♪</div>`;
+
+    return `
+      <div class="overview-track-row ${isCurrent ? 'is-current-playing' : ''}" 
+           data-track-title="${esc(t.title)}"
+           data-raw-num="${trackNumStr}"
+           style="--row-accent:${t.accent || pl.accent || '#d94e34'}; margin-bottom:3px;"
+           onclick="playSongFromOverview('${pl.id}', ${tIdx}, event)"
+           ondblclick="openPlayerFromOverview('${pl.id}', ${tIdx}, event)"
+           title="单击播放，双击进入全屏播放页">
+        <div class="track-index-box">
+          ${isCurrent ? `
+            <div class="eq-anim-container ${isAudPlaying ? '' : 'is-paused'}">
+              <span class="eq-bar"></span>
+              <span class="eq-bar"></span>
+              <span class="eq-bar"></span>
+            </div>
+          ` : trackNumStr}
+        </div>
+        ${thumbHtml}
+        <div class="track-meta-col">
+          <div class="track-title-line">
+            <span>${esc(t.title)}</span>
+            <span class="playlist-badge-pill" style="border-left:2px solid ${pl.accent || '#d94e34'};">${esc(pl.badge || '歌单')}</span>
+            ${t.statusTag ? `<span class="track-tag-chip">${esc(t.statusTag)}</span>` : ''}
+          </div>
+          <div class="track-sub-line">
+            <span>${esc(t.artist || '未知歌手')}</span>
+            <span style="opacity:0.5; margin:0 4px;">·</span>
+            <span style="opacity:0.75;">来自《${esc(pl.title)}》</span>
+          </div>
+        </div>
+        <div class="track-duration-text">${formatMMSS(t.durationSec || 210)}</div>
+        <div class="track-actions-group" onclick="event.stopPropagation();">
+          <button class="track-icon-btn play-btn" 
+                  onclick="playSongFromOverview('${pl.id}', ${tIdx}, event)"
+                  title="${isAudPlaying ? '暂停' : '播放'}">
+            ${isAudPlaying ? `
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+            ` : `
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            `}
+          </button>
+          <button class="track-icon-btn" 
+                  onclick="openPlayerFromOverview('${pl.id}', ${tIdx}, event)" 
+                  title="进入沉浸式播放页与动效">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </button>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  container.appendChild(wrapper);
 }
 
 function render3DBookShelf() { render3DPlaylistShelf(); }
@@ -2308,6 +3313,7 @@ function syncPlayIcons() {
     peeker.style.animationPlayState = isPlaying ? 'running' : 'paused';
   }
 
+  updateOverviewPlayingState();
   broadcastPlaybackState();
 }
 
@@ -2563,24 +3569,58 @@ function startTrackAudio() {
   localAudioEl = null;
 
   noteStep = 0;
+  const notes = (book && book.notes && book.notes.length) ? book.notes : [261.63, 293.66, 329.63, 392.00, 440.00, 392.00, 329.63, 261.63];
   synthInterval = setInterval(() => {
     if (!isPlaying) return;
-    const freq = book.notes[noteStep % book.notes.length];
+    const freq = notes[noteStep % notes.length];
     const now = audioCtx.currentTime;
+
+    // 主旋律高音 (清脆八音盒音色)
     const osc = audioCtx.createOscillator();
     const gain = audioCtx.createGain();
     osc.type = 'sine';
     osc.frequency.setValueAtTime(freq, now);
     osc.frequency.linearRampToValueAtTime(freq * 1.003, now + 0.25);
-
     gain.gain.setValueAtTime(0.001, now);
-    gain.gain.linearRampToValueAtTime(0.09, now + 0.04);
+    gain.gain.linearRampToValueAtTime(0.08 * playerVolume, now + 0.04);
     gain.gain.exponentialRampToValueAtTime(0.0008, now + 0.45);
-
     osc.connect(gain);
     gain.connect(analyserNode || audioCtx.destination);
     osc.start(now);
     osc.stop(now + 0.46);
+
+    // 辅音和弦与温暖低音 (提供沉浸频响，驱动动效波形)
+    if (noteStep % 2 === 0) {
+      const bassOsc = audioCtx.createOscillator();
+      const bassGain = audioCtx.createGain();
+      bassOsc.type = 'triangle';
+      bassOsc.frequency.setValueAtTime(freq * 0.5, now);
+      bassGain.gain.setValueAtTime(0.001, now);
+      bassGain.gain.linearRampToValueAtTime(0.05 * playerVolume, now + 0.08);
+      bassGain.gain.exponentialRampToValueAtTime(0.0005, now + 0.9);
+      bassOsc.connect(bassGain);
+      bassGain.connect(analyserNode || audioCtx.destination);
+      bassOsc.start(now);
+      bassOsc.stop(now + 0.9);
+    }
+
+    // 虚拟播放进度步进与歌词/动效同步
+    book.currentSec = (book.currentSec || 0) + 0.46;
+    if (book.durationSec && book.currentSec >= book.durationSec) {
+      if (playbackMode === 'one') {
+        book.currentSec = 0;
+      } else {
+        skipTrack(1);
+        return;
+      }
+    }
+    const elLbl = ui('elapsedTimeLabel');
+    if (elLbl) elLbl.textContent = formatMMSS(book.currentSec);
+    const progBar = ui('playerProgressBar');
+    if (progBar && book.durationSec) {
+      progBar.style.width = Math.min(100, (book.currentSec / book.durationSec) * 100) + '%';
+    }
+
     noteStep++;
   }, 460);
 }

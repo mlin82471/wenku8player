@@ -4305,3 +4305,392 @@ body {
 .filter-square-btn:active {
   transform: translateY(0.5px) scale(0.96) !important;
 }
+
+/* ==========================================================================
+   歌单与具体曲目列表总览 (Overview & Tracks Explorer)
+   ========================================================================== */
+
+.shelf-list-overview {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.18) transparent;
+}
+.shelf-list-overview::-webkit-scrollbar {
+  width: 6px;
+}
+.shelf-list-overview::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 4px;
+}
+
+.overview-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding: 6px 2px;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: linear-gradient(180deg, rgba(247, 247, 245, 0.96) 0%, rgba(244, 244, 242, 0.9) 100%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.overview-toolbar-left,
+.overview-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.overview-segmented-tabs {
+  display: flex;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 3px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  gap: 3px;
+}
+
+.overview-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #52525b;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.2, 0.9, 0.3, 1);
+  outline: none;
+}
+.overview-tab-btn:hover {
+  color: #18181b;
+}
+.overview-tab-btn.is-active {
+  background: #ffffff;
+  color: #18181b;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.overview-stats-badge {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #71717a;
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  white-space: nowrap;
+}
+
+.overview-search-box {
+  position: relative;
+  width: 195px;
+}
+.overview-search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #9ca3af;
+}
+.overview-search-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 12px 6px 28px;
+  font-size: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.85);
+  color: #18181b;
+  outline: none;
+  transition: all 0.2s ease;
+}
+.overview-search-input:focus {
+  border-color: #6366f1;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.overview-action-btn {
+  padding: 6px 12px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #4b5563;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+}
+.overview-action-btn:hover {
+  background: #ffffff;
+  color: #111827;
+  border-color: rgba(0, 0, 0, 0.16);
+  transform: translateY(-1px);
+}
+
+/* 歌单主卡片容器 */
+.overview-playlist-card {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  transition: box-shadow 0.22s, transform 0.22s, border-color 0.22s;
+}
+.overview-playlist-card:hover {
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.playlist-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 16px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.16s ease;
+}
+.playlist-header-row:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.playlist-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.playlist-badge-pill {
+  font-size: 10px;
+  font-family: monospace;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.06);
+  color: #52525b;
+}
+
+.playlist-header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.playlist-action-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  font-size: 11.5px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.9);
+  color: #4b5563;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+.playlist-action-chip:hover {
+  background: #ffffff;
+  color: #111827;
+  border-color: rgba(0, 0, 0, 0.18);
+  transform: translateY(-1px);
+}
+.playlist-action-chip.accent-play {
+  background: var(--card-accent, #d94e34);
+  color: #ffffff;
+  border-color: transparent;
+}
+.playlist-action-chip.accent-play:hover {
+  filter: brightness(1.08);
+}
+
+/* 歌单内具体曲目列表容器 */
+.playlist-tracks-container {
+  padding: 6px 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(250, 250, 249, 0.55);
+}
+
+/* 每一首具体歌曲行 */
+.overview-track-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  user-select: none;
+  border: 1px solid transparent;
+  background: transparent;
+}
+.overview-track-row:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(0, 0, 0, 0.06);
+  transform: translateX(2px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.overview-track-row.is-current-playing {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: var(--row-accent, #d94e34);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.track-index-box {
+  width: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: #a1a1aa;
+  flex-shrink: 0;
+}
+
+.overview-track-row.is-current-playing .track-index-box {
+  color: var(--row-accent, #d94e34);
+}
+
+/* 正在播放跳动声波条 */
+.eq-anim-container {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2.2px;
+  width: 14px;
+  height: 14px;
+}
+.eq-bar {
+  width: 2.5px;
+  border-radius: 1px;
+  background: var(--row-accent, #d94e34);
+  animation: eqJump 0.8s ease-in-out infinite alternate;
+}
+.eq-bar:nth-child(1) { height: 45%; animation-delay: 0.1s; }
+.eq-bar:nth-child(2) { height: 100%; animation-delay: 0.35s; }
+.eq-bar:nth-child(3) { height: 65%; animation-delay: 0.2s; }
+.is-paused .eq-bar {
+  animation-play-state: paused !important;
+  opacity: 0.6;
+}
+
+@keyframes eqJump {
+  0% { height: 25%; }
+  100% { height: 100%; }
+}
+
+.track-mini-thumb {
+  width: 38px;
+  height: 38px;
+  border-radius: 7px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #27272a;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.track-meta-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.track-title-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 13.5px;
+  color: #18181b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.overview-track-row.is-current-playing .track-title-line {
+  color: var(--row-accent, #d94e34);
+}
+
+.track-tag-chip {
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.05);
+  color: #71717a;
+  letter-spacing: 0.3px;
+}
+
+.track-sub-line {
+  font-size: 11.5px;
+  color: #71717a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track-duration-text {
+  font-size: 11.5px;
+  font-family: monospace;
+  font-weight: 600;
+  color: #a1a1aa;
+  flex-shrink: 0;
+  padding: 0 4px;
+}
+
+.track-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.track-icon-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.04);
+  color: #4b5563;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+.track-icon-btn:hover {
+  background: #ffffff;
+  color: #111827;
+  border-color: rgba(0, 0, 0, 0.16);
+  transform: scale(1.08);
+}
+.overview-track-row.is-current-playing .track-icon-btn.play-btn {
+  background: var(--row-accent, #d94e34);
+  color: #ffffff;
+  border-color: transparent;
+}
