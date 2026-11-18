@@ -1,0 +1,282 @@
+[
+  {
+    "id": "track_01",
+    "name": "青鸟 (Blue Bird)",
+    "artist": "いきものがかり",
+    "album": "My song Your song",
+    "tags": [
+      "ACG",
+      "热血",
+      "火影忍者"
+    ],
+    "audioUrl": "assets/audio/track_01.mp3",
+    "downloaded": true,
+    "sizeBytes": 3363757
+  },
+  {
+    "id": "track_02",
+    "name": "Lemon",
+    "artist": "米津玄師",
+    "album": "Lemon",
+    "tags": [
+      "ACG",
+      "日剧",
+      "治愈"
+    ],
+    "audioUrl": "assets/audio/track_02.mp3",
+    "downloaded": true,
+    "sizeBytes": 6228292
+  },
+  {
+    "id": "track_03",
+    "name": "晴天",
+    "artist": "周杰伦",
+    "album": "叶惠美",
+    "tags": [
+      "流行",
+      "青春",
+      "民谣"
+    ],
+    "audioUrl": "assets/audio/track_03.mp3",
+    "downloaded": true,
+    "sizeBytes": 6201843
+  },
+  {
+    "id": "track_04",
+    "name": "七里香",
+    "artist": "周杰伦",
+    "album": "七里香",
+    "tags": [
+      "流行",
+      "经典",
+      "夏日"
+    ],
+    "audioUrl": "assets/audio/track_04.mp3",
+    "downloaded": true,
+    "sizeBytes": 6714164
+  },
+  {
+    "id": "track_05",
+    "name": "夜曲",
+    "artist": "周杰伦",
+    "album": "十一月的萧邦",
+    "tags": [
+      "流行",
+      "古典流行",
+      "神作"
+    ],
+    "audioUrl": "assets/audio/track_05.mp3",
+    "downloaded": true,
+    "sizeBytes": 6608135
+  },
+  {
+    "id": "track_06",
+    "name": "起风了",
+    "artist": "买辣椒也用券",
+    "album": "起风了",
+    "tags": [
+      "流行",
+      "治愈",
+      "民谣"
+    ],
+    "audioUrl": "assets/audio/track_06.mp3",
+    "downloaded": true,
+    "sizeBytes": 10717891
+  },
+  {
+    "id": "track_07",
+    "name": "如愿",
+    "artist": "王菲",
+    "album": "如愿",
+    "tags": [
+      "流行",
+      "感动",
+      "温情"
+    ],
+    "audioUrl": "assets/audio/track_07.mp3",
+    "downloaded": true,
+    "sizeBytes": 3967509
+  },
+  {
+    "id": "track_08",
+    "name": "大鱼",
+    "artist": "周深",
+    "album": "大鱼海棠",
+    "tags": [
+      "流行",
+      "国风",
+      "空灵"
+    ],
+    "audioUrl": "assets/audio/track_08.mp3",
+    "downloaded": true,
+    "sizeBytes": 11078902
+  },
+  {
+    "id": "track_09",
+    "name": "富士山下",
+    "artist": "陈奕迅",
+    "album": "What's Going On...?",
+    "tags": [
+      "粤语",
+      "流行",
+      "伤感"
+    ],
+    "audioUrl": "assets/audio/track_09.mp3",
+    "downloaded": true,
+    "sizeBytes": 6653491
+  },
+  {
+    "id": "track_10",
+    "name": "此生不换",
+    "artist": "青鸟飞鱼",
+    "album": "仙剑奇侠传三 原声带",
+    "tags": [
+      "仙侠",
+      "流行",
+      "回忆"
+    ],
+    "audioUrl": "assets/audio/track_10.mp3",
+    "downloaded": true,
+    "sizeBytes": 6181887
+  },
+  {
+    "id": "track_11",
+    "name": "打上花火",
+    "artist": "DAOKO × 米津玄師",
+    "album": "THANK YOU BLUE",
+    "tags": [
+      "ACG",
+      "夏祭",
+      "动漫"
+    ],
+    "audioUrl": "assets/audio/track_11.mp3",
+    "downloaded": true,
+    "sizeBytes": 10299411
+  },
+  {
+    "id": "track_12",
+    "name": "残酷な天使のテーゼ",
+    "artist": "高橋洋子",
+    "album": "NEON GENESIS EVANGELION",
+    "tags": [
+      "ACG",
+      "神作",
+      "EVA"
+    ],
+    "audioUrl": "assets/audio/track_12.mp3",
+    "downloaded": true,
+    "sizeBytes": 9698927
+  },
+  {
+    "id": "track_13",
+    "name": "secret base ～君がくれたもの～",
+    "artist": "本間芽衣子 / 安城鳴子 / 鶴見知利子",
+    "album": "secret base",
+    "tags": [
+      "ACG",
+      "催泪",
+      "未闻花名"
+    ],
+    "audioUrl": "assets/audio/track_13.mp3",
+    "downloaded": true,
+    "sizeBytes": 5639094
+  },
+  {
+    "id": "track_14",
+    "name": "only my railgun",
+    "artist": "fripSide",
+    "album": "infinite synthesis",
+    "tags": [
+      "ACG",
+      "电音",
+      "超电磁炮"
+    ],
+    "audioUrl": "assets/audio/track_14.mp3",
+    "downloaded": true,
+    "sizeBytes": 6565071
+  },
+  {
+    "id": "track_15",
+    "name": "Butter-Fly",
+    "artist": "和田光司",
+    "album": "Butter-Fly",
+    "tags": [
+      "ACG",
+      "童年",
+      "数码宝贝"
+    ],
+    "audioUrl": "assets/audio/track_15.mp3",
+    "downloaded": true,
+    "sizeBytes": 6204346
+  },
+  {
+    "id": "track_16",
+    "name": "Brave Shine",
+    "artist": "Aimer",
+    "album": "DAWN",
+    "tags": [
+      "ACG",
+      "燃系",
+      "Fate"
+    ],
+    "audioUrl": "assets/audio/track_16.mp3",
+    "downloaded": true,
+    "sizeBytes": 6405014
+  },
+  {
+    "id": "track_17",
+    "name": "红莲华 (紅蓮華)",
+    "artist": "LiSA",
+    "album": "LEO-NiNE",
+    "tags": [
+      "ACG",
+      "鬼灭之刃",
+      "燃系"
+    ],
+    "audioUrl": "assets/audio/track_17.mp3",
+    "downloaded": true,
+    "sizeBytes": 5696820
+  },
+  {
+    "id": "track_18",
+    "name": "光年之外",
+    "artist": "G.E.M. 邓紫棋",
+    "album": "光年之外",
+    "tags": [
+      "流行",
+      "深情",
+      "电影"
+    ],
+    "audioUrl": "assets/audio/track_18.mp3",
+    "downloaded": true,
+    "sizeBytes": 3997641
+  },
+  {
+    "id": "track_19",
+    "name": "稻香",
+    "artist": "周杰伦",
+    "album": "魔杰座",
+    "tags": [
+      "流行",
+      "童年",
+      "治愈"
+    ],
+    "audioUrl": "assets/audio/track_19.mp3",
+    "downloaded": true,
+    "sizeBytes": 8874569
+  },
+  {
+    "id": "track_20",
+    "name": "告白气球",
+    "artist": "周杰伦",
+    "album": "周杰伦的床边故事",
+    "tags": [
+      "流行",
+      "浪漫",
+      "甜歌"
+    ],
+    "audioUrl": "assets/audio/track_20.mp3",
+    "downloaded": true,
+    "sizeBytes": 8679878
+  }
+]
