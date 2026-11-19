@@ -807,7 +807,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#2563eb",
     "c1": "#3b82f6",
     "c2": "#1e3a8a",
-    "picUrl": "https://p1.music.126.net/1o8U-yXf1V2BwR1056586g==/109951166668388960.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_01.jpg",
     "audioUrl": "assets/audio/track_01.mp3",
     "notes": [
       329.63,
@@ -867,7 +867,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#eab308",
     "c1": "#fde047",
     "c2": "#713f12",
-    "picUrl": "https://p1.music.126.net/wnOa1q6wKxH7Fvj1mZ2h0A==/109951163167191147.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_02.jpg",
     "audioUrl": "assets/audio/track_02.mp3",
     "notes": [
       261.63,
@@ -922,7 +922,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#f59e0b",
     "c1": "#fbbf24",
     "c2": "#78350f",
-    "picUrl": "https://p1.music.126.net/1nvK_U_w-q46K_2aN0QOag==/109951163965902484.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_03.jpg",
     "audioUrl": "assets/audio/track_03.mp3",
     "notes": [
       293.66,
@@ -977,7 +977,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#059669",
     "c1": "#34d399",
     "c2": "#064e3b",
-    "picUrl": "https://p1.music.126.net/19pM0e2fT_qJ55q_o6V1sg==/109951163965910604.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_04.jpg",
     "audioUrl": "assets/audio/track_04.mp3",
     "notes": [
       261.63,
@@ -1032,7 +1032,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#6366f1",
     "c1": "#818cf8",
     "c2": "#312e81",
-    "picUrl": "https://p1.music.126.net/b77P1x2_v_r4_L89g95M-Q==/109951163965906326.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_05.jpg",
     "audioUrl": "assets/audio/track_05.mp3",
     "notes": [
       220,
@@ -1087,7 +1087,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#0ea5e9",
     "c1": "#38bdf8",
     "c2": "#0c4a6e",
-    "picUrl": "https://p1.music.126.net/diLz49Z2nB9yD0w9M_Nq3A==/109951163699840569.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_06.jpg",
     "audioUrl": "assets/audio/track_06.mp3",
     "notes": [
       261.63,
@@ -1142,7 +1142,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#d946ef",
     "c1": "#e879f9",
     "c2": "#701a75",
-    "picUrl": "https://p1.music.126.net/v7P7W_0-e-XfB0mC6Z1J_w==/109951166442654162.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_07.jpg",
     "audioUrl": "assets/audio/track_07.mp3",
     "notes": [
       261.63,
@@ -1197,7 +1197,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#06b6d4",
     "c1": "#22d3ee",
     "c2": "#164e63",
-    "picUrl": "https://p1.music.126.net/UeTuwE7pvjBpQNnAXQhL7A==/109951166668388960.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_08.jpg",
     "audioUrl": "assets/audio/track_08.mp3",
     "notes": [
       220,
@@ -1252,7 +1252,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#64748b",
     "c1": "#94a3b8",
     "c2": "#1e293b",
-    "picUrl": "https://p1.music.126.net/1o8U-yXf1V2BwR1056586g==/109951166668388960.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_09.jpg",
     "audioUrl": "assets/audio/track_09.mp3",
     "notes": [
       261.63,
@@ -1307,7 +1307,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#10b981",
     "c1": "#34d399",
     "c2": "#065f46",
-    "picUrl": "https://p1.music.126.net/v7P7W_0-e-XfB0mC6Z1J_w==/109951166442654162.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_10.jpg",
     "audioUrl": "assets/audio/track_10.mp3",
     "notes": [
       261.63,
@@ -1362,7 +1362,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#f43f5e",
     "c1": "#fb7185",
     "c2": "#4c0519",
-    "picUrl": "https://p1.music.126.net/1o8U-yXf1V2BwR1056586g==/109951166668388960.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_11.jpg",
     "audioUrl": "assets/audio/track_11.mp3",
     "notes": [
       293.66,
@@ -1412,7 +1412,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#9333ea",
     "c1": "#a855f7",
     "c2": "#3b0764",
-    "picUrl": "https://p1.music.126.net/sZ_Jc3k2y9R2Z9U2x6vYxA==/109951163111451633.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_12.jpg",
     "audioUrl": "assets/audio/track_12.mp3",
     "notes": [
       440,
@@ -1467,7 +1467,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#ec4899",
     "c1": "#f472b6",
     "c2": "#831843",
-    "picUrl": "https://p1.music.126.net/wnOa1q6wKxH7Fvj1mZ2h0A==/109951163167191147.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_13.jpg",
     "audioUrl": "assets/audio/track_13.mp3",
     "notes": [
       261.63,
@@ -1517,7 +1517,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#3b82f6",
     "c1": "#60a5fa",
     "c2": "#1d4ed8",
-    "picUrl": "https://p1.music.126.net/1o8U-yXf1V2BwR1056586g==/109951166668388960.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_14.jpg",
     "audioUrl": "assets/audio/track_14.mp3",
     "notes": [
       329.63,
@@ -1567,7 +1567,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#f59e0b",
     "c1": "#fbbf24",
     "c2": "#b45309",
-    "picUrl": "https://p1.music.126.net/wnOa1q6wKxH7Fvj1mZ2h0A==/109951163167191147.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_15.jpg",
     "audioUrl": "assets/audio/track_15.mp3",
     "notes": [
       293.66,
@@ -1617,7 +1617,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#d97706",
     "c1": "#f59e0b",
     "c2": "#451a03",
-    "picUrl": "https://p1.music.126.net/1o8U-yXf1V2BwR1056586g==/109951166668388960.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_16.jpg",
     "audioUrl": "assets/audio/track_16.mp3",
     "notes": [
       329.63,
@@ -1662,7 +1662,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#dc2626",
     "c1": "#ef4444",
     "c2": "#7f1d1d",
-    "picUrl": "https://p1.music.126.net/sZ_Jc3k2y9R2Z9U2x6vYxA==/109951163111451633.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_17.jpg",
     "audioUrl": "assets/audio/track_17.mp3",
     "notes": [
       329.63,
@@ -1712,7 +1712,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#8b5cf6",
     "c1": "#a78bfa",
     "c2": "#4c1d95",
-    "picUrl": "https://p1.music.126.net/19pM0e2fT_qJ55q_o6V1sg==/109951163965910604.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_18.jpg",
     "audioUrl": "assets/audio/track_18.mp3",
     "notes": [
       261.63,
@@ -1762,7 +1762,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#84cc16",
     "c1": "#a3e635",
     "c2": "#365314",
-    "picUrl": "https://p1.music.126.net/1nvK_U_w-q46K_2aN0QOag==/109951163965902484.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_19.jpg",
     "audioUrl": "assets/audio/track_19.mp3",
     "notes": [
       261.63,
@@ -1817,7 +1817,7 @@ const REAL_20_DEMO_TRACKS = [
     "accent": "#f43f5e",
     "c1": "#fb7185",
     "c2": "#881337",
-    "picUrl": "https://p1.music.126.net/b77P1x2_v_r4_L89g95M-Q==/109951163965906326.jpg?param=400y400",
+    "picUrl": "assets/covers/cover_20.jpg",
     "audioUrl": "assets/audio/track_20.mp3",
     "notes": [
       293.66,
@@ -1875,7 +1875,7 @@ const ACG_DEMO_TRACKS = [
     accent: "#2563eb",
     c1: "#3b82f6",
     c2: "#1e3a8a",
-    picUrl: "https://p1.music.126.net/1o8U-yXf1V2BwR1056586g==/109951166668388960.jpg?param=400y400",
+    picUrl: "assets/covers/cover_01.jpg",
     notes: [329.63, 392.00, 440.00, 493.88, 523.25, 493.88, 440.00, 392.00],
     lyrics: [
       { t: 0, l1: "飞翔之时 便已下定决心", l2: "目标是那片蔚蓝的天空" },
@@ -1903,7 +1903,7 @@ const ACG_DEMO_TRACKS = [
     accent: "#eab308",
     c1: "#fde047",
     c2: "#713f12",
-    picUrl: "https://p1.music.126.net/wnOa1q6wKxH7Fvj1mZ2h0A==/109951163167191147.jpg?param=400y400",
+    picUrl: "assets/covers/cover_02.jpg",
     notes: [261.63, 293.66, 329.63, 349.23, 392.00, 349.23, 329.63, 293.66],
     lyrics: [
       { t: 0, l1: "如果这一切都只是一场梦 那该有多好", l2: "至今依然在梦中追寻着你的身影" },
@@ -1930,7 +1930,7 @@ const ACG_DEMO_TRACKS = [
     accent: "#9333ea",
     c1: "#a855f7",
     c2: "#3b0764",
-    picUrl: "https://p1.music.126.net/sZ_Jc3k2y9R2Z9U2x6vYxA==/109951163111451633.jpg?param=400y400",
+    picUrl: "assets/covers/cover_12.jpg",
     notes: [440.00, 493.88, 523.25, 587.33, 659.25, 587.33, 523.25, 440.00],
     lyrics: [
       { t: 0, l1: "就像残酷的天使一样", l2: "少年啊 成为神话吧" },
@@ -2085,7 +2085,7 @@ const POP_DEMO_TRACKS = [
     accent: "#059669",
     c1: "#10b981",
     c2: "#022c22",
-    picUrl: "https://p1.music.126.net/8P471B_v8kFm39A_194788.jpg?param=400y400",
+    picUrl: "assets/covers/cover_10.jpg",
     notes: [261.63, 293.66, 329.63, 392.00, 440.00, 392.00, 329.63, 261.63],
     lyrics: [
       { t: 0, l1: "时光穿梭 如流星般划过茫茫夜空", l2: "喝不完忘川水 也难断三生缘" },
@@ -2444,7 +2444,7 @@ const DEFAULT_PLAYLIST_ARCHIVES = [
     spineTitle: "20首真实原声",
     subtitle: "由 go-music-dl 下载入库的 20 首无损/高清完整音轨 · 离线零依赖直接播放",
     desc: "覆盖 ACG 燃曲与华语巅峰流行，内置 20 首高保真真实音频，断网环境自洽畅听",
-    coverImgUrl: "https://p1.music.126.net/1o8U-yXf1V2BwR1056586g==/109951166668388960.jpg?param=400y400",
+    coverImgUrl: "assets/covers/cover_box_real20.jpg",
     trackCount: 20,
     accent: "#ec4899",
     badge: "20首真实音源",
@@ -2478,7 +2478,7 @@ const DEFAULT_PLAYLIST_ARCHIVES = [
     spineTitle: "ACG 巅峰神曲",
     subtitle: "火影《青鸟》/ 米津玄师《Lemon》/ EVA《残酷天使》等 8 首必听神曲",
     desc: "跨越时代的动漫原声神曲典藏，触动每一次热血与泪目的经典共鸣",
-    coverImgUrl: "https://p1.music.126.net/1o8U-yXf1V2BwR1056586g==/109951166668388960.jpg?param=400y400",
+    coverImgUrl: "assets/covers/cover_box_acg.jpg",
     trackCount: ACG_DEMO_TRACKS.length,
     accent: "#2563eb",
     badge: "ACG",
@@ -2495,7 +2495,7 @@ const DEFAULT_PLAYLIST_ARCHIVES = [
     spineTitle: "华语流行金曲",
     subtitle: "周杰伦《七里香》《晴天》/ 仙剑《此生不换》/《起风了》华语流行精选",
     desc: "刻录青春岁月里的旋律记忆，高品质母带级声场还原",
-    coverImgUrl: "https://p1.music.126.net/8P471B_v8kFm39A_194788.jpg?param=400y400",
+    coverImgUrl: "assets/covers/cover_box_pop.jpg",
     trackCount: POP_DEMO_TRACKS.length,
     accent: "#059669",
     badge: "流行",
